@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "W+VhVKv9yE9m8q7UdJlkt3sBj8+CYQLfBsZAM1xivQt/RCXclE+ybxz74gSAV1+nllpvz/M9vTiaMhA5kTamjw==",
+  "success": true,
+  "projectFilePath": "/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/zeyneb/.nuget/packages/fluentvalidation/8.6.1/fluentvalidation.8.6.1.nupkg.sha512",
+    "/Users/zeyneb/.nuget/packages/fluentvalidation.dependencyinjectionextensions/8.6.1/fluentvalidation.dependencyinjectionextensions.8.6.1.nupkg.sha512",
+    "/Users/zeyneb/.nuget/packages/mediatr/12.4.0/mediatr.12.4.0.nupkg.sha512",
+    "/Users/zeyneb/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/Users/zeyneb/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/zeyneb/.nuget/packages/system.componentmodel.annotations/4.4.1/system.componentmodel.annotations.4.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}

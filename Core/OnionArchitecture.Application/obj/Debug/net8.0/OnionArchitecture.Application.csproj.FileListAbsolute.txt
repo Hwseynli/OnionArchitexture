@@ -1,0 +1,15 @@
+/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/bin/Debug/net8.0/OnionArchitecture.Application.deps.json
+/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/bin/Debug/net8.0/OnionArchitecture.Application.dll
+/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/bin/Debug/net8.0/OnionArchitecture.Application.pdb
+/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/obj/Debug/net8.0/OnionArchitecture.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/obj/Debug/net8.0/OnionArchitecture.Application.AssemblyInfoInputs.cache
+/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/obj/Debug/net8.0/OnionArchitecture.Application.AssemblyInfo.cs
+/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/obj/Debug/net8.0/OnionArchitecture.Application.csproj.CoreCompileInputs.cache
+/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/obj/Debug/net8.0/OnionArchitecture.Application.dll
+/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/obj/Debug/net8.0/refint/OnionArchitecture.Application.dll
+/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/obj/Debug/net8.0/OnionArchitecture.Application.pdb
+/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/obj/Debug/net8.0/ref/OnionArchitecture.Application.dll
+/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/bin/Debug/net8.0/OnionArchitecture.Domain.dll
+/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/bin/Debug/net8.0/OnionArchitecture.Domain.pdb
+/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/obj/Debug/net8.0/OnionArchitecture.Application.csproj.AssemblyReference.cache
+/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/obj/Debug/net8.0/OnionArc.8A92E527.Up2Date
