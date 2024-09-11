@@ -1,8 +1,8 @@
-﻿using System;
-using OnionArchitecture.Domain.Entities;
+﻿using OnionArchitecture.Domain.Entities;
 
-namespace OnionArchitecture.Application.Interfaces;
-public interface IUserRepository:IRepository<User>
+namespace OnionArchitecture.Application.Interfaces
 {
+    public interface IUserRepository:IRepository<User>
+    {
+    }
 }
-

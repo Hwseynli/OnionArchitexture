@@ -3,37 +3,18 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>disable</Nullable>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Interfaces\" />
-    <None Remove="Features\" />
-    <None Remove="Features\Common\User\" />
-    <None Remove="Features\Common\User\Register\" />
-    <None Remove="Features\Commands\" />
-    <None Remove="Features\Commands\User\" />
-    <None Remove="Features\Commands\User\Register\" />
-    <None Remove="Exceptions\" />
-    <None Remove="Common\" />
-    <None Remove="Common\Behaviour\" />
+    <PackageReference Include="FluentValidation" Version="11.9.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2" />
+    <PackageReference Include="MediatR" Version="12.4.0" />
   </ItemGroup>
+
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Features\" />
-    <Folder Include="Features\Commands\" />
-    <Folder Include="Features\Commands\User\" />
-    <Folder Include="Features\Commands\User\Register\" />
-    <Folder Include="Exceptions\" />
-    <Folder Include="Common\" />
-    <Folder Include="Common\Behaviour\" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\..\Infrasturture\OnionArchitecture.Infrastructure\OnionArchitecture.Infrastructure.csproj" />
     <ProjectReference Include="..\OnionArchitecture.Domain\OnionArchitecture.Domain.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="MediatR" Version="12.4.0" />
-    <PackageReference Include="FluentValidation" Version="8.6.1" />
-    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="8.6.1" />
-  </ItemGroup>
+
 </Project>

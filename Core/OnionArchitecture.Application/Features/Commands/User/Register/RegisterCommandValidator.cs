@@ -1,20 +1,17 @@
-﻿using System;
-using FluentValidation;
+﻿using FluentValidation;
 
-namespace OnionArchitecture.Application.Features.Commands.User.Register;
-public class RegisterCommandValidator:AbstractValidator<RegisterCommand>
+namespace OnionArchitecture.Application.Features.Commands.User.Register
 {
-    public RegisterCommandValidator():base()
+    public class RegisterCommandValidator : AbstractValidator<RegisterCommand>
     {
-        RuleFor(command => command.FirstName).NotNull();
-        RuleFor(command => command.LastName).NotNull();
-        RuleFor(command => command.Email).Must(
-            x=>x.Contains("@gmail.com"))
-                .WithMessage("Sadece daxili mail olmalıdır. ");
+        public RegisterCommandValidator():base()
+        {
+            RuleFor(command=>command.Name).NotNull();
+            RuleFor(command=>command.Surname).NotNull();
+            RuleFor(command=>command.Password).MinimumLength(10).NotNull();
+            RuleFor(command=>command.Email).Must(x=>
+            x.Contains("@gmail.com")).WithMessage("Sadəcə daxili mail olmalıdır");
 
-        RuleFor(command => command.Password).MinimumLength(6).NotNull();
-
-
+        }
     }
 }
-

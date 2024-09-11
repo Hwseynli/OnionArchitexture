@@ -7,13 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Entities\" />
-    <None Remove="Common\" />
-    <None Remove="Exceptions\" />
+    <ProjectReference Include="..\..\Infrasturture\OnionArchitecture.Infrastructure\OnionArchitecture.Infrastructure.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Common\" />
-    <Folder Include="Exceptions\" />
-  </ItemGroup>
+
 </Project>

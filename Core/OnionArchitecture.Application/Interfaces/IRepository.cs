@@ -1,20 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace OnionArchitecture.Application.Interfaces;
-public interface IRepository<T> where T : class
+namespace OnionArchitecture.Application.Interfaces
 {
-    Task Commit(CancellationToken cancellationToken);
-    Task AddAsync(T entity);
-    Task UpdateAsync(T entity);
-    void DeleteAsync(T entity);
-    Task<T?> GetByIdAsync(int id, params Expression<Func<T, object>>[] includes);
+    public interface IRepository<T> where T : class
+    {
+        Task Commit();
+        Task AddAsync(T entity);
+        Task<IEnumerable<T>> GetAllAsync(Expression<Func<T,bool>> filter=null);
+        Task HardDeleteAsync(T entity);
+        Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null, params string[]? includes);
+        Task<T> GetAsync(Expression<Func<T, bool>>? filter = null, params string[]? includes);
 
-    public Task<T> GetAsync(Expression<Func<T, bool>>? filter = null, params string[]? includes);
+    }
 
-    #region sehvdeyiluzundu
-    public Task<IEnumerable<T>> GetAllAsync(
-                 Expression<Func<T, bool>>? filter = null,
-                 params Expression<Func<T, object>>[] includes);
-    #endregion
+   
+   
+
+
 }

@@ -1,19 +1,19 @@
-﻿using System;
-using FluentValidation.Results;
+﻿using FluentValidation.Results;
 
-namespace OnionArchitecture.Application.Exceptions;
-public class ValidationException:Exception
+namespace OnionArchitecture.Application.Exceptions
 {
-    public ValidationException():base("One or more validation failures have occured.")
+    public class ValidationException : Exception
     {
-        Errors = new Dictionary<string, string[]>();
+        public ValidationException() : base("One or more validation failures hav occured.")
+        {
+            Errors = new Dictionary<string, string[]>();
+        }
+        public ValidationException(IEnumerable<ValidationFailure> failures) : this()
+        {
+            Errors=failures
+                .GroupBy(x=>x.PropertyName, x => x.ErrorMessage)
+                .ToDictionary(failureGroup=>failureGroup.Key, failureGroup => failureGroup.ToArray());
+        }
+        public IDictionary<string, string[]> Errors { get; }
     }
-    public ValidationException(IEnumerable<ValidationFailure> failures):this()
-    {
-        Errors = failures
-            .GroupBy(x=>x.PropertyName,x=>x.ErrorMessage)
-            .ToDictionary(failureGroup=>failureGroup.Key,failureGroup=> failureGroup.ToArray());
-    }
-
-    public IDictionary<string, string[]> Errors { get; }
 }

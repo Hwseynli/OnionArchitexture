@@ -1,42 +1,20 @@
-﻿<Properties StartupConfiguration="{50D6C39B-2B87-4DEA-B4E0-00E735E6B01B}|https">
+﻿<Properties StartupConfiguration="{FC38663D-7E7E-46B6-B1DB-083332AD8E3C}|https">
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.OnionArchitecture PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Infrastructure/OnionArchitecture.Persistence/Repositories/UserRepository.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="OnionArchitecture/appsettings.json">
     <Files>
-      <File FileName="Infrastructure/OnionArchitecture.Persistence/ServiceRegistration.cs" Line="1" Column="1" />
-      <File FileName="Infrastructure/OnionArchitecture.Persistence/Repositories/UserRepository.cs" Line="1" Column="1" />
+      <File FileName="OnionArchitecture/appsettings.json" Line="13" Column="32" />
+      <File FileName="Infrastructure/OnionArchitecture.Persistence/Concrete/UserManager.cs" Line="31" Column="85" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="OnionArchitecture" expanded="True">
-            <Node name="Core" expanded="True">
-              <Node name="OnionArchitecture.Application" expanded="True">
-                <Node name="Interfaces" expanded="True" />
-              </Node>
-              <Node name="OnionArchitecture.Domain" expanded="True">
-                <Node name="Common" expanded="True" />
-                <Node name="Entities" expanded="True" />
-                <Node name="Exceptions" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="Infrastructure" expanded="True">
-              <Node name="OnionArchitecture.Persistence" expanded="True">
-                <Node name="Data" expanded="True" />
-                <Node name="EntityConfigurations" expanded="True">
-                  <Node name="UserTypeEntityConfigurations" expanded="True" />
-                </Node>
-                <Node name="Repositories" expanded="True">
-                  <Node name="UserRepository.cs" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="OnionArchitecture" selected="True" />
         </State>
       </Pad>
     </Pads>
