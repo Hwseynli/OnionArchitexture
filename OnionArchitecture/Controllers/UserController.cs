@@ -59,10 +59,10 @@ public class UserController : ControllerBase
     public async Task<IActionResult> SendOtp(SendOtpCommand command)
     {
         var result = await _mediator.Send(command);
-        return Ok(result);
+        return result ? Ok("OTP has been sent to your email.") : BadRequest("User not found");
     }
 
-    [HttpPost("updatePasswordWithOtp")]
+    [HttpPost("resetPassword")]
     public async Task<IActionResult> UpdatePasswordWithOtp(UpdatePasswordWithOtpCommand command)
     {
         var result = await _mediator.Send(command);

@@ -6,7 +6,6 @@ public class UpdatePasswordWithOtpCommandValidator : AbstractValidator<UpdatePas
 {
     public UpdatePasswordWithOtpCommandValidator()
     {
-        RuleFor(x => x.Email).NotEmpty().EmailAddress();
         RuleFor(x => x.OtpCode).NotEmpty();
         RuleFor(x => x.NewPassword).NotEmpty().MinimumLength(6);
     }

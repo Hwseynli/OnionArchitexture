@@ -1,5 +1,4 @@
-﻿using System;
-using MediatR;
+﻿using MediatR;
 using OnionArchitecture.Application.Exceptions;
 using OnionArchitecture.Application.Interfaces;
 using OnionArchitecture.Infrastructure;
@@ -16,16 +15,13 @@ public class UpdatePasswordWithOtpCommandHandler : IRequestHandler<UpdatePasswor
 
     public async Task<bool> Handle(UpdatePasswordWithOtpCommand request, CancellationToken cancellationToken)
     {
-        var user = await _userRepository.GetAsync(u => u.Email == request.Email);
-        if (user == null)
-        {
-            throw new NotFoundException("User not found.");
-        }
+        var user = await _userRepository.GetAsync
+            (u => u.OtpCode == request.OtpCode &&
+            u.OtpGeneratedAt != null &&
+            u.OtpGeneratedAt.Value.AddMinutes(15) >= DateTime.UtcNow);
 
-        if (user.OtpCode != request.OtpCode || user.OtpGeneratedAt == null || user.OtpGeneratedAt.Value.AddMinutes(15) < DateTime.UtcNow)
-        {
+        if (user == null)
             throw new BadRequestException("Invalid OTP or OTP has expired.");
-        }
 
         user.ResetPassword(PasswordHasher.HashPassword(request.NewPassword));
         user.UpdateOtp(null); // OTP-i sil
