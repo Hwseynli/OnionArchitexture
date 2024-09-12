@@ -13,6 +13,9 @@ public class User : BaseEntity
     public string? RefreshToken { get; private set; }
     public bool IsDeleted { get; private set; }
     public bool Activated { get; private set; }
+    //ForgotPassword üçün :
+    public string? OtpCode { get; private set; }
+    public DateTime?OtpGeneratedAt { get; private set; }
 
     public void SetDetails(string firstName, string lastName, string userName, string email, string password)
     {
@@ -33,19 +36,26 @@ public class User : BaseEntity
             LastPasswordChangeDateTime = DateTime.UtcNow.AddHours(4);
         }
     }
-    public void ResetPassword(string newPasswordHash)
-    {
-        PasswordHash = newPasswordHash;
-        LastPasswordChangeDateTime = DateTime.UtcNow.AddHours(4);
-    }
 
     public void UpdateRefreshToken(string refreshToken)
     {
         RefreshToken = refreshToken;
     }
-
+    //Update üçün:
     public void SetUserName(string userName)
     {
         UserName = userName;
+    }
+    //ForgotPassword üçün:
+    public void UpdateOtp(string otpCode)
+    {
+        OtpCode = otpCode;
+        OtpGeneratedAt = DateTime.UtcNow.AddHours(4);
+    }
+
+    public void ResetPassword(string newPasswordHash)
+    {
+        PasswordHash = newPasswordHash;
+        LastPasswordChangeDateTime = DateTime.UtcNow.AddHours(4);
     }
 }

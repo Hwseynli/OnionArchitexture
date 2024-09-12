@@ -60,6 +60,12 @@ namespace OnionArchitecture.Persistence.Migrations
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("last_password_change_date");
 
+                    b.Property<string>("OtpCode")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("OtpGeneratedAt")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("text")

@@ -147,6 +147,7 @@
 /Users/zeyneb/Projects/OnionArchitecture/OnionArchitecture/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Design.dll
 /Users/zeyneb/Projects/OnionArchitecture/OnionArchitecture/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/zeyneb/Projects/OnionArchitecture/OnionArchitecture/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+/Users/zeyneb/Projects/OnionArchitecture/OnionArchitecture/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
 /Users/zeyneb/Projects/OnionArchitecture/OnionArchitecture/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
 /Users/zeyneb/Projects/OnionArchitecture/OnionArchitecture/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
 /Users/zeyneb/Projects/OnionArchitecture/OnionArchitecture/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll

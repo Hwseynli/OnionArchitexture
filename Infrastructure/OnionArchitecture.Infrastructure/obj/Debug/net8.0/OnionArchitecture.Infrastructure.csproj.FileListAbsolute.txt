@@ -1,6 +1,7 @@
 /Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/bin/Debug/net8.0/OnionArchitecture.Infrastructure.deps.json
 /Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/bin/Debug/net8.0/OnionArchitecture.Infrastructure.dll
 /Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/bin/Debug/net8.0/OnionArchitecture.Infrastructure.pdb
+/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/OnionArchitecture.Infrastructure.csproj.AssemblyReference.cache
 /Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/OnionArchitecture.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 /Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/OnionArchitecture.Infrastructure.AssemblyInfoInputs.cache
 /Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/OnionArchitecture.Infrastructure.AssemblyInfo.cs

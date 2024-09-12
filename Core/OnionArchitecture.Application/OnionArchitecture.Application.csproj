@@ -19,8 +19,14 @@
 
   <ItemGroup>
     <None Remove="Features\Commands\User\UpdateUser\" />
+    <None Remove="Features\Commands\User\ForgotPassword\" />
+    <None Remove="Features\Queries\User\" />
+    <None Remove="Features\Commands\User\ UpdatePasswordWithOtp\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\Commands\User\UpdateUser\" />
+    <Folder Include="Features\Commands\User\ForgotPassword\" />
+    <Folder Include="Features\Queries\User\" />
+    <Folder Include="Features\Commands\User\ UpdatePasswordWithOtp\" />
   </ItemGroup>
 </Project>
