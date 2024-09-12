@@ -19,8 +19,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Core\OnionArchitecture.Application\OnionArchitecture.Application.csproj" />
-    <ProjectReference Include="..\Infrasturture\OnionArchitecture.Infrastructure\OnionArchitecture.Infrastructure.csproj" />
-    <ProjectReference Include="..\OnionArchitecture.Persistence\OnionArchitecture.Persistence.csproj" />
+    <ProjectReference Include="..\Infrastructure\OnionArchitecture.Infrastructure\OnionArchitecture.Infrastructure.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\OnionArchitecture.Persistence\OnionArchitecture.Persistence.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>

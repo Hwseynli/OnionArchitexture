@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj": {}
+    "/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj": {}
   },
   "projects": {
-    "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj": {
+    "/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj",
+        "projectUniqueName": "/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj",
         "projectName": "OnionArchitecture.Domain",
-        "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj",
+        "projectPath": "/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj",
         "packagesPath": "/Users/zeyneb/.nuget/packages/",
-        "outputPath": "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Domain/obj/",
+        "outputPath": "/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/zeyneb/.nuget/NuGet/NuGet.Config"
@@ -27,8 +27,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/zeyneb/Projects/OnionArchitexture/Infrasturture/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj": {
-                "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Infrasturture/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj"
+              "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj": {
+                "projectPath": "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj"
               }
             }
           }
@@ -37,6 +37,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -62,14 +67,14 @@
         }
       }
     },
-    "/Users/zeyneb/Projects/OnionArchitexture/Infrasturture/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj": {
+    "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/zeyneb/Projects/OnionArchitexture/Infrasturture/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
+        "projectUniqueName": "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
         "projectName": "OnionArchitecture.Infrastructure",
-        "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Infrasturture/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
+        "projectPath": "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
         "packagesPath": "/Users/zeyneb/.nuget/packages/",
-        "outputPath": "/Users/zeyneb/Projects/OnionArchitexture/Infrasturture/OnionArchitecture.Infrastructure/obj/",
+        "outputPath": "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/zeyneb/.nuget/NuGet/NuGet.Config"
@@ -91,21 +96,16 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Http.Abstractions": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.AspNetCore.Mvc.Core": {
-              "target": "Package",
-              "version": "[2.2.5, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

@@ -1,16 +1,9 @@
-﻿using OnionArchitecture.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Security.Claims;
+using OnionArchitecture.Domain.Entities;
 
-namespace OnionArchitecture.Application.Interfaces
+namespace OnionArchitecture.Application.Interfaces;
+public interface IClaimManager
 {
-    public interface IClaimManager
-    {
-        int GetCurrentUserId();
-        IEnumerable<Claim> GetUserClaims(User user);
-    }
+    int GetCurrentUserId();
+    IEnumerable<Claim> GetUserClaims(User user);
 }
