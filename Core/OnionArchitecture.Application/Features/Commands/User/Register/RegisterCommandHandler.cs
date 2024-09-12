@@ -20,3 +20,5 @@ public class RegisterCommandHandler : IRequestHandler<RegisterCommand, bool>
         return true;
     }
 }
+
+

@@ -4,4 +4,5 @@ namespace OnionArchitecture.Application.Interfaces;
 public interface IUserRepository:IRepository<User>
 {
     Task<bool> IsUserNameUniqueAsync(string userName);
+    Task<bool> IsEmailUniqueAsync(string email);
 }

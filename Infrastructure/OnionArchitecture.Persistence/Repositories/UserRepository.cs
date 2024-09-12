@@ -14,4 +14,9 @@ public class UserRepository : Repository<User>, IUserRepository
         var existingUser = await GetAsync(u => u.UserName == userName);
         return existingUser == null;
     }
+    public async Task<bool> IsEmailUniqueAsync(string email) // Yeni metod
+    {
+        var existingUser = await GetAsync(u => u.Email == email);
+        return existingUser == null;
+    }
 }

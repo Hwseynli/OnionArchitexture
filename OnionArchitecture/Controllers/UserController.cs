@@ -38,7 +38,8 @@ public class UserController : ControllerBase
     [HttpPut("update")]
     public async Task<IActionResult> Update([FromBody] UpdateUserCommand command)
     {
-        return Ok(await _mediator.Send(command));
+        var result = await _mediator.Send(command);
+        return result ? Ok("User updated successfully.") : BadRequest("User not found or invalid data.");
     }
 
 

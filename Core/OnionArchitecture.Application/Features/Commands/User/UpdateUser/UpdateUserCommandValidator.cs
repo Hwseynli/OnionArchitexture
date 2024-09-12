@@ -18,7 +18,7 @@ public class UpdateUserCommandValidator : AbstractValidator<UpdateUserCommand>
 
         RuleFor(command => command.UserName).NotNull().MustAsync(async (command, userName, cancellation) =>
         {
-            var user = await _userRepository.GetAsync(u => u.Id == command.Id);
+            var user = await _userRepository.GetAsync(u => u.Email == command.Email);
 
             // İstifadəçi Username-i ayda yalnız bir dəfə dəyişə bilər.
             if (user != null && user.UserName != userName &&
@@ -33,7 +33,7 @@ public class UpdateUserCommandValidator : AbstractValidator<UpdateUserCommand>
         RuleFor(command => command.Password).NotNull()
             .MustAsync(async (command, password, cancellation) =>
             {
-                var user = await _userRepository.GetAsync(u => u.Id == command.Id);
+                var user = await _userRepository.GetAsync(u => u.Email == command.Email);
                 return user != null && user.PasswordHash == PasswordHasher.HashPassword(password);
             }).WithMessage("Mövcud parol səhvdir.");
     }

@@ -4,7 +4,6 @@ using OnionArchitecture.Application.Interfaces;
 using OnionArchitecture.Infrastructure;
 
 namespace OnionArchitecture.Application.Features.Commands.User.UpdateUser;
-
 public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, bool>
 {
     private readonly IUserRepository _userRepository;
@@ -16,10 +15,10 @@ public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, bool>
 
     public async Task<bool> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
     {
-        var user = await _userRepository.GetAsync(u => u.Id == request.Id);
+        var user = await _userRepository.GetAsync(u => u.Email == request.Email);
 
         if (user == null)
-            return false; // İstifadəçi tapılmadı
+            new NotFoundException("User not found");
 
         // Parolun düzgünlüyünü validator yoxlayır, ona görə burda ayrıca yoxlamaya ehtiyac yoxdur.
         // Username yalnız ayda bir dəfə dəyişdirilə bilər (artıq validator yoxlayıb).
@@ -35,7 +34,7 @@ public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, bool>
             user.SetPasswordHash(PasswordHasher.HashPassword(request.NewPassword));
         }
 
-        user.SetDetails(request.Name, request.Surname, user.UserName, request.Email, user.PasswordHash); // Email və Name dəyişdirilir
+        user.SetDetails(request.Name, request.Surname, user.UserName, user.Email, user.PasswordHash); // Surname və Name dəyişdirilir
 
         await _userRepository.Commit(cancellationToken);
 
