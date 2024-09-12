@@ -1,7 +1,5 @@
-﻿namespace OnionArchitecture.Application.Features.Queries
+﻿namespace OnionArchitecture.Application.Features.Queries;
+public interface IUserQueries
 {
-    public interface IUserQueries
-    {
-        
-    }
+    
 }

@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OnionArchitecture.Application.Features.Queries
+﻿namespace OnionArchitecture.Application.Features.Queries;
+public class UserQueries:IUserQueries
 {
-    public class UserQueries:IUserQueries
-    {
-    }
 }

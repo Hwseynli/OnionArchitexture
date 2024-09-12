@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g5ZxSP8zWczqdPAAoPlGlHTKaLsHBZ1HnL0U+KG51ecJYM7jgV0uNC/3mvAm3QdHta2b0haNUwi3dGL7XlJqJQ==",
+  "dgSpecHash": "yhXdI9JTPK/tjMXpI/+cqTQyErCqNKJTjORSbkoXf3o88Y6fDGK/q6kKn+5XL/vqeZ8EZcWV8B+WJP18Qz9UJA==",
   "success": true,
-  "projectFilePath": "/Users/zeyneb/Projects/OnionArchitecture/Infrasturture/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
+  "projectFilePath": "/Users/zeyneb/Projects/OnionArchitexture/Infrasturture/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/zeyneb/.nuget/packages/microsoft.aspnetcore.authentication.abstractions/2.2.0/microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/microsoft.aspnetcore.authentication.core/2.2.0/microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

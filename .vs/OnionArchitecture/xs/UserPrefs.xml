@@ -6,15 +6,13 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="OnionArchitecture/appsettings.json">
-    <Files>
-      <File FileName="OnionArchitecture/appsettings.json" Line="13" Column="32" />
-      <File FileName="Infrastructure/OnionArchitecture.Persistence/Concrete/UserManager.cs" Line="31" Column="85" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="OnionArchitecture" selected="True" />
+          <Node name="OnionArchitecture">
+            <Node name="OnionArchitecture" expanded="True" />
+          </Node>
         </State>
       </Pad>
     </Pads>

@@ -4064,11 +4064,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/zeyneb/Projects/OnionArchitecture/Infrasturture/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
+      "projectUniqueName": "/Users/zeyneb/Projects/OnionArchitexture/Infrasturture/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
       "projectName": "OnionArchitecture.Infrastructure",
-      "projectPath": "/Users/zeyneb/Projects/OnionArchitecture/Infrasturture/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
+      "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Infrasturture/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
       "packagesPath": "/Users/zeyneb/.nuget/packages/",
-      "outputPath": "/Users/zeyneb/Projects/OnionArchitecture/Infrasturture/OnionArchitecture.Infrastructure/obj/",
+      "outputPath": "/Users/zeyneb/Projects/OnionArchitexture/Infrasturture/OnionArchitecture.Infrastructure/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/zeyneb/.nuget/NuGet/NuGet.Config"

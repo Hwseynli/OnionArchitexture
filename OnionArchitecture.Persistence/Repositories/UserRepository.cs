@@ -9,5 +9,11 @@ namespace OnionArchitecture.Persistence.Repositories
         public UserRepository(TestDbContext context) : base(context)
         {
         }
+
+        public async Task<bool> IsUserNameUniqueAsync(string userName)
+        {
+            var existingUser = await GetAsync(u => u.UserName == userName);
+            return existingUser == null;
+        }
     }
 }

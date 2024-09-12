@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C7uHXVH8YFKcCGuPKCPojLKhXpdXo76wu3YCPuworTAXeBXYesn8LPePy3E8H2JwY+Z439rkeMOJwgw0PX5FKw==",
+  "dgSpecHash": "YRSZfJtgJSxwZCY6337f+cZSVLymhrxXNXaeek2/8eo3Cq2w90LO3F2+u3Hs9V6cZRiiqZPSDxf5yK1w8dapUg==",
   "success": true,
-  "projectFilePath": "/Users/zeyneb/Projects/OnionArchitecture/OnionArchitecture/OnionArchitecture.csproj",
+  "projectFilePath": "/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/OnionArchitecture.csproj",
   "expectedPackageFiles": [
     "/Users/zeyneb/.nuget/packages/fluentvalidation/11.9.2/fluentvalidation.11.9.2.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.9.2/fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512",
