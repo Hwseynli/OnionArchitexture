@@ -43,4 +43,9 @@ public class User : BaseEntity
     {
         RefreshToken = refreshToken;
     }
+
+    public void SetUserName(string userName)
+    {
+        UserName = userName;
+    }
 }

@@ -31,7 +31,7 @@ public class CreateAuthorizationTokenCommandHandler : IRequestHandler<CreateAuth
         var refreshToken = $"{random}_{user.Id}_{DateTime.UtcNow.AddDays(20)}";
         user.UpdateRefreshToken(refreshToken);
         (string token, DateTime expireAt) = _userManager.GenerateTJwtToken(user);
-        await _userRepository.Commit();
+        await _userRepository.Commit(cancellationToken);
         return new JwtTokenDto
         {
             ExpireAt = expireAt,

@@ -17,4 +17,10 @@
     <ProjectReference Include="..\OnionArchitecture.Domain\OnionArchitecture.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Features\Commands\User\UpdateUser\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\Commands\User\UpdateUser\" />
+  </ItemGroup>
 </Project>

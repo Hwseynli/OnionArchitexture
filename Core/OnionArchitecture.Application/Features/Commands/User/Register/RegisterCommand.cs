@@ -9,5 +9,3 @@ public class RegisterCommand:IRequest<bool>
     public string Password { get; set; }
     public string UserName { get; set; }
 }
-
-

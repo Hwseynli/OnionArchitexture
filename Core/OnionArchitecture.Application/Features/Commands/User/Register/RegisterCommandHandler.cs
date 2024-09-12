@@ -16,7 +16,7 @@ public class RegisterCommandHandler : IRequestHandler<RegisterCommand, bool>
         var user = new Domain.Entities.User();
          user.SetDetails(request.Name,request.Surname,request.UserName,request.Email,request.Password);
         await _userRepository.AddAsync(user);
-        await _userRepository.Commit();
+        await _userRepository.Commit(cancellationToken);
         return true;
     }
 }

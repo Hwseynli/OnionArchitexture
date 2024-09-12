@@ -18,7 +18,7 @@ public class Repository<T> : IRepository<T> where T : class
         await _context.Set<T>().AddAsync(entity);
     }
 
-    public async Task Commit()
+    public async Task Commit(CancellationToken cancellationToken)
     {
         await _context.SaveChangesAsync();
     }
