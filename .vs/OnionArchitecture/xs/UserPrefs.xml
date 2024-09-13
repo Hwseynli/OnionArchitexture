@@ -1,13 +1,23 @@
 ﻿<Properties StartupConfiguration="{FC38663D-7E7E-46B6-B1DB-083332AD8E3C}|https">
-  <MonoDevelop.Ide.ItemProperties.Infrastructure.OnionArchitecture.Infrastructure FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.Infrastructure.OnionArchitecture.Persistence FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="OnionArchitecture">
-            <Node name="Infrastructure">
-              <Node name="OnionArchitecture.Persistence" expanded="True" />
+          <Node name="OnionArchitecture" expanded="True">
+            <Node name="Core" expanded="True">
+              <Node name="OnionArchitecture.Application">
+                <Node name="Features" expanded="True">
+                  <Node name="Commands" expanded="True">
+                    <Node name="User" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="Infrastructure" expanded="True">
+              <Node name="OnionArchitecture.Infrastructure" expanded="True" />
             </Node>
             <Node name="OnionArchitecture" expanded="True" />
           </Node>
@@ -15,11 +25,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.OnionArchitecture PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.OnionArchitecture PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
