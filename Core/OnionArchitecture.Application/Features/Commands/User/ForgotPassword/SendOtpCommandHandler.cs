@@ -2,20 +2,19 @@
 using MediatR;
 using OnionArchitecture.Application.Exceptions;
 using OnionArchitecture.Application.Interfaces;
-using OnionArchitecture.Infrastructure.Services;
 using OnionArchitecture.Infrastructure.Utils;
 
 namespace OnionArchitecture.Application.Features.Commands.User.ForgotPassword;
 public class SendOtpCommandHandler : IRequestHandler<SendOtpCommand, bool>
 {
     private readonly IUserRepository _userRepository;
-    private readonly IEmailService _emailService;
+    private readonly IEmailManager _emailManager;
     private readonly IValidator<SendOtpCommand> _validator;
 
-    public SendOtpCommandHandler(IUserRepository userRepository, IEmailService emailService, IValidator<SendOtpCommand> validator)
+    public SendOtpCommandHandler(IUserRepository userRepository, IEmailManager emailManager, IValidator<SendOtpCommand> validator)
     {
         _userRepository = userRepository;
-        _emailService = emailService;
+        _emailManager = emailManager;
         _validator = validator;
     }
 
@@ -33,7 +32,7 @@ public class SendOtpCommandHandler : IRequestHandler<SendOtpCommand, bool>
         user.UpdateOtp(otpCode); // OTP user obyektində saxlanılır (məsələn, baza üçün)
         await _userRepository.Commit(cancellationToken);
 
-        await _emailService.SendOtpAsync(user.Email, otpCode); // OTP email ilə göndərilir
+        await _emailManager.SendOtpAsync(user.Email, otpCode); // OTP email ilə göndərilir
         return true;
     }
 }

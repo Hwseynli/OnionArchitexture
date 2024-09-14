@@ -59,14 +59,16 @@ public class UserController : ControllerBase
     [HttpPost("sendOtp")]
     public async Task<IActionResult> SendOtp(SendOtpCommand command)
     {
-        var result = await _mediator.Send(command);
-        return result ? Ok("OTP has been sent to your email.") : BadRequest("User not found");
+        return Ok(await _mediator.Send(command));
+        //var result = await _mediator.Send(command);
+        //return result ? Ok("OTP has been sent to your email.") : BadRequest("User not found");
     }
 
     [HttpPost("resetPassword")]
     public async Task<IActionResult> UpdatePasswordWithOtp(UpdatePasswordWithOtpCommand command)
     {
-        var result = await _mediator.Send(command);
-        return result ? Ok("Password updated successfully.") : BadRequest("Invalid OTP or OTP has expired.");
+        return Ok(await _mediator.Send(command));
+        //var result = await _mediator.Send(command);
+        //return result ? Ok("Password updated successfully.") : BadRequest("Invalid OTP or OTP has expired.");
     }
 }

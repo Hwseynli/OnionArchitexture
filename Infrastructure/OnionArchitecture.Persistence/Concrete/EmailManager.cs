@@ -1,13 +1,15 @@
-﻿using System.Net;
-using System.Net.Mail;
+﻿using System;
 using Microsoft.Extensions.Configuration;
+using System.Net;
+using System.Net.Mail;
+using OnionArchitecture.Application.Interfaces;
 
-namespace OnionArchitecture.Infrastructure.Services;
-public class EmailService : IEmailService
+namespace OnionArchitecture.Persistence.Concrete;
+public class EmailManager:IEmailManager
 {
     private readonly IConfiguration _configuration;
 
-    public EmailService(IConfiguration configuration)
+    public EmailManager(IConfiguration configuration)
     {
         _configuration = configuration;
     }
