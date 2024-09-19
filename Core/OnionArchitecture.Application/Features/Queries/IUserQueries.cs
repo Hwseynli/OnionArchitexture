@@ -3,6 +3,6 @@
 namespace OnionArchitecture.Application.Features.Queries;
 public interface IUserQueries
 {
-    Task<UserProfileDto> GetUserProfileAsync(string email);
+    Task<UserProfileDto> GetUserProfileAsync();
 
 }

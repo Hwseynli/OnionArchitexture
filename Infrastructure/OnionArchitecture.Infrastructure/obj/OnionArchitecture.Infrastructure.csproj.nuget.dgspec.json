@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj": {}
+    "/Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj": {}
   },
   "projects": {
-    "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj": {
+    "/Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
+        "projectUniqueName": "/Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
         "projectName": "OnionArchitecture.Infrastructure",
-        "projectPath": "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
+        "projectPath": "/Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
         "packagesPath": "/Users/zeyneb/.nuget/packages/",
-        "outputPath": "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/obj/",
+        "outputPath": "/Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/zeyneb/.nuget/NuGet/NuGet.Config"

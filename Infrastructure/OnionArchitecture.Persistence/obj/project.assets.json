@@ -3231,11 +3231,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Persistence/OnionArchitecture.Persistence.csproj",
+      "projectUniqueName": "/Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Persistence/OnionArchitecture.Persistence.csproj",
       "projectName": "OnionArchitecture.Persistence",
-      "projectPath": "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Persistence/OnionArchitecture.Persistence.csproj",
+      "projectPath": "/Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Persistence/OnionArchitecture.Persistence.csproj",
       "packagesPath": "/Users/zeyneb/.nuget/packages/",
-      "outputPath": "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Persistence/obj/",
+      "outputPath": "/Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Persistence/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/zeyneb/.nuget/NuGet/NuGet.Config"
@@ -3251,11 +3251,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj": {
-              "projectPath": "/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj"
+            "/Users/zeyneb/Desktop/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj": {
+              "projectPath": "/Users/zeyneb/Desktop/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj"
             },
-            "/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj": {
-              "projectPath": "/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj"
+            "/Users/zeyneb/Desktop/OnionArchitexture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj": {
+              "projectPath": "/Users/zeyneb/Desktop/OnionArchitexture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj"
             }
           }
         }

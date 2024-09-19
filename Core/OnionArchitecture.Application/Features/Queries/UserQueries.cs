@@ -6,14 +6,17 @@ namespace OnionArchitecture.Application.Features.Queries;
 public class UserQueries : IUserQueries
 {
     private readonly IUserRepository _userRepository;
+    private readonly IUserManager _userManager;
 
-    public UserQueries(IUserRepository userRepository)
+    public UserQueries(IUserRepository userRepository, IUserManager userManager)
     {
         _userRepository = userRepository;
+        _userManager = userManager;
     }
-    public async Task<UserProfileDto> GetUserProfileAsync(string email)
+    public async Task<UserProfileDto> GetUserProfileAsync()
     {
-        var user = await _userRepository.GetAsync(u => u.Email == email);
+        //var id = _userManager.GetCurrentUserId();
+        var user = await _userRepository.GetAsync((u => u.Id == _userManager.GetCurrentUserId()));
         if (user == null)
         {
             throw new NotFoundException("User not found.");

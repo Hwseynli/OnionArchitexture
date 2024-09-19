@@ -530,11 +530,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj",
+      "projectUniqueName": "/Users/zeyneb/Desktop/OnionArchitexture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj",
       "projectName": "OnionArchitecture.Domain",
-      "projectPath": "/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj",
+      "projectPath": "/Users/zeyneb/Desktop/OnionArchitexture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj",
       "packagesPath": "/Users/zeyneb/.nuget/packages/",
-      "outputPath": "/Users/zeyneb/Projects/OnionArchitecture/Core/OnionArchitecture.Domain/obj/",
+      "outputPath": "/Users/zeyneb/Desktop/OnionArchitexture/Core/OnionArchitecture.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/zeyneb/.nuget/NuGet/NuGet.Config"
@@ -550,8 +550,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj": {
-              "projectPath": "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj"
+            "/Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj": {
+              "projectPath": "/Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj"
             }
           }
         }

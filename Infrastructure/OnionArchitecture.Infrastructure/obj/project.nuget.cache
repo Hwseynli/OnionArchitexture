@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rtzGIjAdMdz1GPYyi3xcz15eBuiSVs2l2HqjMFdcCjiUSRkja31BNnWo9nfpasVgL4cGiOYLMMn3QluRHJewJA==",
+  "dgSpecHash": "aPrEHMgxbM4/UEMnCGqp+9d24W0UJc3KGM1eVLEDdEgZgSqjM6d/uCkMeL2ZwzRxBTj0K+xUUjdA4CSz4K6f5Q==",
   "success": true,
-  "projectFilePath": "/Users/zeyneb/Projects/OnionArchitecture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
+  "projectFilePath": "/Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/zeyneb/.nuget/packages/microsoft.extensions.configuration/8.0.0/microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

@@ -44,9 +44,9 @@ public class UserController : ControllerBase
 
 
     [HttpGet("profile")]
-    public async Task<IActionResult> GetProfile([FromQuery] string email)
+    public async Task<IActionResult> GetProfile()
     {
-        var profile = await _userQueries.GetUserProfileAsync(email);
+        var profile = await _userQueries.GetUserProfileAsync();
         return Ok(profile);
     }
 
