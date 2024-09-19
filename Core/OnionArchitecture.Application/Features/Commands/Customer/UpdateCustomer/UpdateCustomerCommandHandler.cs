@@ -74,8 +74,6 @@ public class UpdateCustomerCommandHandler : IRequestHandler<UpdateCustomerComman
                 }
                 customer.AdditionDocuments.Add(existDocuments);
             }
-
-
         }
 
         if (request.DeletedDocuments != null)
@@ -88,4 +86,3 @@ public class UpdateCustomerCommandHandler : IRequestHandler<UpdateCustomerComman
         return true;
     }
 }
-

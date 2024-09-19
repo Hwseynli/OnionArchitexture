@@ -7,22 +7,40 @@ namespace OnionArchitecture.Application.Features.Commands.Customer.UpdateCustome
     {
         public UpdateCustomerCommandValidator()
         {
-            RuleFor(command => command.Id).NotNull().WithMessage("Customer Id is required.");
-            RuleFor(command => command.Name).NotEmpty().WithMessage("Name is required.");
-            RuleFor(command => command.Surname).NotEmpty().WithMessage("Surname is required.");
-            RuleFor(command => command.Email).NotEmpty().EmailAddress().WithMessage("A valid email is required.");
-            RuleFor(command => command.AdditionDocuments).Must(x => x.Count > 0).WithMessage("At least one additional document is required.");
+            // Validate that ID is provided
+            RuleFor(command => command.Id).GreaterThan(0);
 
-            RuleForEach(command => command.AdditionDocuments)
-                .ChildRules(document =>
+            // Only validate name, surname, and email if they are not null (they might not change)
+            When(command => !string.IsNullOrEmpty(command.Name), () =>
+            {
+                RuleFor(command => command.Name).NotNull().NotEmpty();
+            });
+
+            When(command => !string.IsNullOrEmpty(command.Surname), () =>
+            {
+                RuleFor(command => command.Surname).NotNull().NotEmpty();
+            });
+
+            When(command => !string.IsNullOrEmpty(command.Email), () =>
+            {
+                RuleFor(command => command.Email).NotNull().EmailAddress();
+            });
+
+            // Validate documents only if new documents are added or existing ones are updated
+            When(command => command.AdditionDocuments.Any(), () =>
+            {
+                RuleForEach(command => command.AdditionDocuments).ChildRules(doc =>
                 {
-                    document.RuleFor(x => x.DocumentTypeId).NotNull().WithMessage("Document type is required.");
-                    document.RuleFor(x => x.Documents).Must(x => x.Count > 0).WithMessage("At least one document file is required.");
-                    document.When(x => x.DocumentTypeId == (int)DocumentType.Other, () =>
-                    {
-                        document.RuleFor(x => x.Other).NotEmpty().WithMessage("Other document type details must be provided.");
-                    });
+                    doc.RuleFor(d => d.DocumentTypeId).NotNull();
+                    doc.RuleFor(d => d.Documents).Must(docs => docs.Count > 0).WithMessage("At least one document should be uploaded.");
                 });
+            });
+
+            // Validate deleted documents if any are present
+            When(command => command.DeletedDocuments.Any(), () =>
+            {
+                RuleFor(command => command.DeletedDocuments).Must(ids => ids.All(id => id > 0)).WithMessage("Invalid document ID for deletion.");
+            });
         }
     }
 }
