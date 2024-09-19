@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace OnionArchitecture.Infrastructure;
+namespace OnionArchitecture.Infrastructure.Utils;
 public static class PasswordHasher
 {
     public static string HashPassword(string password)

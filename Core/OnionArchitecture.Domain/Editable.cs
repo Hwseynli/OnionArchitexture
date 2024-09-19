@@ -8,7 +8,6 @@ public class Editable<TUser> : Auditable<TUser> where TUser : User
 
     public void SetEditFields(int? updatedById)
     {
-
         UpdateById = updatedById;
         LastUpdateDateTime = DateTime.UtcNow.AddHours(4);
     }

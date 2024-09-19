@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using OnionArchitecture.Persistence;
+using OnionArchitecture.Infrastructure.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -73,7 +74,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddHttpContextAccessor();
-//builder.Services.AddScoped<IHttpContextAccessor,HttpContextAccessor>();   
+builder.Services.Configure<FileSettings>(configuration.GetSection(nameof(FileSettings)));
 var app = builder.Build();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 // Configure the HTTP request pipeline.

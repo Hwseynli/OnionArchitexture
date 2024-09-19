@@ -378,3 +378,4 @@
 /Users/zeyneb/Desktop/OnionArchitexture/OnionArchitecture/obj/Debug/net8.0/OnionArchitecture.pdb
 /Users/zeyneb/Desktop/OnionArchitexture/OnionArchitecture/obj/Debug/net8.0/OnionArchitecture.genruntimeconfig.cache
 /Users/zeyneb/Desktop/OnionArchitexture/OnionArchitecture/obj/Debug/net8.0/ref/OnionArchitecture.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Microsoft.Extensions.Options.dll

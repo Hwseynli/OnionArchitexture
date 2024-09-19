@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using OnionArchitecture.Application.Exceptions;
 using OnionArchitecture.Application.Interfaces.IRepositories;
-using OnionArchitecture.Infrastructure;
+using OnionArchitecture.Infrastructure.Utils;
 
 namespace OnionArchitecture.Application.Features.Commands.User.ForgotPassword.ResetPassword;
 public class ResetPasswordCommandHandler : IRequestHandler<ResetPasswordCommand, bool>

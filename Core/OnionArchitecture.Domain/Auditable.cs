@@ -3,8 +3,9 @@ using OnionArchitecture.Domain.Entities;
 using OnionArchitecture.Domain.Exceptions;
 
 namespace OnionArchitecture.Domain;
-public class Auditable<TUser>:BaseEntity where TUser : User
+public class Auditable<TUser>:IBaseEntity where TUser : User
 {
+    public int Id { get; set; }
     public int CreatedById { get;protected set; }
     public DateTime RecordDateTime { get;protected set; }
 

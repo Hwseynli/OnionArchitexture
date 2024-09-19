@@ -60,8 +60,18 @@ public class Repository<T> : IRepository<T> where T : class
         return await (filter == null ? query.FirstOrDefaultAsync() : query.FirstOrDefaultAsync(filter));
     }
 
-    public void HardDelete(T entity)
+    public async Task HardDelete(T entity)
     {
         _context.Set<T>().Remove(entity);
+    }
+
+    public async Task RemoveRange(IEnumerable<T> entities)
+    {
+        _context.Set<T>().RemoveRange(entities);
+    }
+
+    public async Task Update(T entity)
+    {
+        _context.Set<T>().Update(entity);
     }
 }

@@ -1,5 +1,5 @@
 ﻿namespace OnionArchitecture.Domain.Common;
-public class BaseEntity
+public interface IBaseEntity
 {
     public int Id { get; set; }
 }

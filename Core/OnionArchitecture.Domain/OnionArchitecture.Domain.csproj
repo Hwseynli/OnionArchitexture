@@ -10,4 +10,10 @@
     <ProjectReference Include="..\..\Infrastructure\OnionArchitecture.Infrastructure\OnionArchitecture.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Entities\Documents\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\Documents\" />
+  </ItemGroup>
 </Project>

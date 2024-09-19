@@ -1364,6 +1364,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Microsoft.Extensions.Options": "8.0.2",
           "System.Threading.Tasks": "4.3.0"
@@ -3744,11 +3745,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/zeyneb/Desktop/OnionArchitexture/OnionArchitecture/OnionArchitecture.csproj",
+      "projectUniqueName": "/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/OnionArchitecture.csproj",
       "projectName": "OnionArchitecture",
-      "projectPath": "/Users/zeyneb/Desktop/OnionArchitexture/OnionArchitecture/OnionArchitecture.csproj",
+      "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/OnionArchitecture.csproj",
       "packagesPath": "/Users/zeyneb/.nuget/packages/",
-      "outputPath": "/Users/zeyneb/Desktop/OnionArchitexture/OnionArchitecture/obj/",
+      "outputPath": "/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/zeyneb/.nuget/NuGet/NuGet.Config"
@@ -3764,14 +3765,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/zeyneb/Desktop/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj": {
-              "projectPath": "/Users/zeyneb/Desktop/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj"
+            "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj": {
+              "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj"
             },
-            "/Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj": {
-              "projectPath": "/Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj"
+            "/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj": {
+              "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj"
             },
-            "/Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Persistence/OnionArchitecture.Persistence.csproj": {
-              "projectPath": "/Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Persistence/OnionArchitecture.Persistence.csproj"
+            "/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Persistence/OnionArchitecture.Persistence.csproj": {
+              "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Persistence/OnionArchitecture.Persistence.csproj"
             }
           }
         }

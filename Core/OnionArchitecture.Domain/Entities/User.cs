@@ -1,9 +1,10 @@
 ﻿using OnionArchitecture.Domain.Common;
-using OnionArchitecture.Infrastructure;
+using OnionArchitecture.Infrastructure.Utils;
 
 namespace OnionArchitecture.Domain.Entities;
-public class User : BaseEntity
+public class User : IBaseEntity
 {
+    public int Id { get; set; }
     public string FirstName { get; private set; }
     public string LastName { get; private set; }
     public string UserName { get; private set; }

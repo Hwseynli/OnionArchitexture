@@ -759,6 +759,7 @@
       },
       "OnionArchitecture.Infrastructure/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Microsoft.Extensions.Options": "8.0.2",
           "System.Threading.Tasks": "4.3.0"

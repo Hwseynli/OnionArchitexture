@@ -3,8 +3,8 @@ using OnionArchitecture.Application.Exceptions;
 using OnionArchitecture.Application.Features.Commands.User.ViewModels;
 using OnionArchitecture.Application.Interfaces.IRepositories;
 using OnionArchitecture.Application.Interfaces.IManagers;
-using OnionArchitecture.Infrastructure;
 using System.Security.Cryptography;
+using OnionArchitecture.Infrastructure.Utils;
 
 namespace OnionArchitecture.Application.Features.Commands.User.Login;
 public class CreateAuthorizationTokenCommandHandler : IRequestHandler<CreateAuthorizationTokenCommand, JwtTokenDto>

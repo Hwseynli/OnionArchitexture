@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 using OnionArchitecture.Application.Interfaces.IRepositories;
-using OnionArchitecture.Infrastructure;
+using OnionArchitecture.Infrastructure.Utils;
 
 namespace OnionArchitecture.Application.Features.Commands.User.UpdateUser;
 public class UpdateUserCommandValidator : AbstractValidator<UpdateUserCommand>

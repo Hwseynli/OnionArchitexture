@@ -6,6 +6,7 @@ using OnionArchitecture.Application.Interfaces.IManagers;
 using OnionArchitecture.Persistence.Concrete;
 using OnionArchitecture.Persistence.Context;
 using OnionArchitecture.Persistence.Repositories;
+using OnionArchitecture.Application.Features.Queries;
 
 namespace OnionArchitecture.Persistence;
 public static class ServiceRegistration
@@ -34,6 +35,7 @@ public static class ServiceRegistration
             .AsImplementedInterfaces()
             .WithScopedLifetime());
 
+        services.AddScoped<IUserQueries, UserQueries>();
         services.AddScoped<IClaimManager, ClaimManager>();
         services.AddScoped<IUserManager, UserManager>();
         services.AddScoped<IEmailManager, EmailManager>();

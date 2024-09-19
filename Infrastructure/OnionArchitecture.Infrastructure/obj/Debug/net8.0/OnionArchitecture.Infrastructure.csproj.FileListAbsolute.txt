@@ -24,3 +24,16 @@
 /Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/refint/OnionArchitecture.Infrastructure.dll
 /Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/OnionArchitecture.Infrastructure.pdb
 /Users/zeyneb/Desktop/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/ref/OnionArchitecture.Infrastructure.dll
+/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/bin/Debug/net8.0/OnionArchitecture.Infrastructure.deps.json
+/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/bin/Debug/net8.0/OnionArchitecture.Infrastructure.dll
+/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/bin/Debug/net8.0/OnionArchitecture.Infrastructure.pdb
+/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/OnionArchitecture.Infrastructure.csproj.AssemblyReference.cache
+/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/OnionArchitecture.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/OnionArchitecture.Infrastructure.AssemblyInfoInputs.cache
+/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/OnionArchitecture.Infrastructure.AssemblyInfo.cs
+/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/OnionArchitecture.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/OnionArchitecture.Infrastructure.sourcelink.json
+/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/OnionArchitecture.Infrastructure.dll
+/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/refint/OnionArchitecture.Infrastructure.dll
+/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/OnionArchitecture.Infrastructure.pdb
+/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/obj/Debug/net8.0/ref/OnionArchitecture.Infrastructure.dll

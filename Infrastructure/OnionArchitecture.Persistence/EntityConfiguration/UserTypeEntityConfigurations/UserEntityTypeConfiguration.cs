@@ -32,6 +32,9 @@ public class UserEntityTypeConfiguration : IEntityTypeConfiguration<User>
              .IsRequired()
              .HasColumnName("mail");
 
+        builder.HasIndex(t => t.Email)
+            .IsUnique();
+
         builder.Property(x => x.PasswordHash)
              .IsRequired()
              .HasColumnName("password_hash");
