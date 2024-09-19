@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using OnionArchitecture.Application.Features.Commands.Customer.CreateCustomer;
+using OnionArchitecture.Application.Features.Commands.Customer.UpdateCustomer;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -21,6 +22,13 @@ public class CustomersController : ControllerBase
     {
         await _mediator.Send(command);
         return Ok();
+    }
+
+    [HttpPut]
+    public async Task<IActionResult> Update([FromForm] UpdateCustomerCommand command)
+    {
+        var result = await _mediator.Send(command);
+        return result ? Ok() : BadRequest();
     }
 }
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnionArchitecture.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+186b6bf56a1e044bfe57734f9c81cee317defe12")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35b791931285ad58ac8532d53cb5cba8b076a04a")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnionArchitecture.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnionArchitecture.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
