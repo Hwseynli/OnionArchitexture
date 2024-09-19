@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace OnionArchitecture.Application.Features.Commands.User.ForgotPassword;
+namespace OnionArchitecture.Application.Features.Commands.User.ForgotPassword.SendOtp;
 public class SendOtpCommandValidator : AbstractValidator<SendOtpCommand>
 {
     public SendOtpCommandValidator()
@@ -10,4 +10,3 @@ public class SendOtpCommandValidator : AbstractValidator<SendOtpCommand>
             .EmailAddress().WithMessage("A valid email is required.");
     }
 }
-

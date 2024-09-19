@@ -1,10 +1,11 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using OnionArchitecture.Application.Features.Commands.User.ForgotPassword;
+using OnionArchitecture.Application.Features.Commands.User.ForgotPassword.ResetPassword;
+using OnionArchitecture.Application.Features.Commands.User.ForgotPassword.SendOtp;
+using OnionArchitecture.Application.Features.Commands.User.ForgotPassword.VerifyOtp;
 using OnionArchitecture.Application.Features.Commands.User.Login;
 using OnionArchitecture.Application.Features.Commands.User.RefreshToken;
 using OnionArchitecture.Application.Features.Commands.User.Register;
-using OnionArchitecture.Application.Features.Commands.User.UpdatePasswordWithOtp;
 using OnionArchitecture.Application.Features.Commands.User.UpdateUser;
 using OnionArchitecture.Application.Features.Queries;
 
@@ -64,11 +65,25 @@ public class UserController : ControllerBase
         //return result ? Ok("OTP has been sent to your email.") : BadRequest("User not found");
     }
 
-    [HttpPost("resetPassword")]
-    public async Task<IActionResult> UpdatePasswordWithOtp(UpdatePasswordWithOtpCommand command)
+    //[HttpPost("resetPassword")]
+    //public async Task<IActionResult> UpdatePasswordWithOtp(ResetPasswordCommand command)
+    //{
+    //    return Ok(await _mediator.Send(command));
+    //    //var result = await _mediator.Send(command);
+    //    //return result ? Ok("Password updated successfully.") : BadRequest("Invalid OTP or OTP has expired.");
+    //}
+
+    [HttpPost("verifyOtp")]
+    public async Task<IActionResult> VerifyOtp(VerifyOtpCommand command)
     {
-        return Ok(await _mediator.Send(command));
-        //var result = await _mediator.Send(command);
-        //return result ? Ok("Password updated successfully.") : BadRequest("Invalid OTP or OTP has expired.");
+        var isValid = await _mediator.Send(command);
+        return isValid ? Ok("OTP is valid.") : BadRequest("Invalid or expired OTP.");
+    }
+
+    [HttpPost("resetPassword")]
+    public async Task<IActionResult> ResetPassword(ResetPasswordCommand command)
+    {
+        var isReset = await _mediator.Send(command);
+        return isReset ? Ok("Password updated successfully.") : BadRequest("Failed to reset password.");
     }
 }

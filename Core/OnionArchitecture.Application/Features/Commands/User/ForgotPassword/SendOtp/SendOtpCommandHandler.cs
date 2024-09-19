@@ -4,7 +4,7 @@ using OnionArchitecture.Application.Exceptions;
 using OnionArchitecture.Application.Interfaces;
 using OnionArchitecture.Infrastructure.Utils;
 
-namespace OnionArchitecture.Application.Features.Commands.User.ForgotPassword;
+namespace OnionArchitecture.Application.Features.Commands.User.ForgotPassword.SendOtp;
 public class SendOtpCommandHandler : IRequestHandler<SendOtpCommand, bool>
 {
     private readonly IUserRepository _userRepository;
