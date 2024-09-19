@@ -1,7 +1,7 @@
 ﻿using System.Security.Authentication;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
-using OnionArchitecture.Application.Interfaces;
+using OnionArchitecture.Application.Interfaces.IManagers;
 using OnionArchitecture.Domain.Entities;
 
 namespace OnionArchitecture.Persistence.Concrete;

@@ -58,7 +58,7 @@ public class User : BaseEntity
         UserName = userName;
     }
     //ForgotPassword üçün:
-    public void UpdateOtp(string otpCode)
+    public void UpdateOtp(string? otpCode)
     {
         OtpCode = otpCode;
         OtpGeneratedAt = DateTime.UtcNow.AddHours(4);

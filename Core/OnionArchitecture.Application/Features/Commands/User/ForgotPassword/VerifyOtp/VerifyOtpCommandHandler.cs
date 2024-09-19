@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using OnionArchitecture.Application.Exceptions;
-using OnionArchitecture.Application.Interfaces;
+using OnionArchitecture.Application.Interfaces.IRepositories;
 
 namespace OnionArchitecture.Application.Features.Commands.User.ForgotPassword.VerifyOtp;
 public class VerifyOtpCommandHandler : IRequestHandler<VerifyOtpCommand, bool>

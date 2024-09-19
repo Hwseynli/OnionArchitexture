@@ -1,6 +1,7 @@
 ﻿using OnionArchitecture.Application.Exceptions;
-using OnionArchitecture.Application.Features.Queries.User;
-using OnionArchitecture.Application.Interfaces;
+using OnionArchitecture.Application.Features.Queries.ViewModels;
+using OnionArchitecture.Application.Interfaces.IRepositories;
+using OnionArchitecture.Application.Interfaces.IManagers;
 
 namespace OnionArchitecture.Application.Features.Queries;
 public class UserQueries : IUserQueries

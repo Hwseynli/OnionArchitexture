@@ -1,6 +1,6 @@
 ﻿using OnionArchitecture.Domain.Entities;
 
-namespace OnionArchitecture.Application.Interfaces;
+namespace OnionArchitecture.Application.Interfaces.IManagers;
 public interface IUserManager
 {
     public int GetCurrentUserId();

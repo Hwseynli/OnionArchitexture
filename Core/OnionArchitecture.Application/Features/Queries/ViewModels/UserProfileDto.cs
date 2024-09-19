@@ -1,4 +1,4 @@
-﻿namespace OnionArchitecture.Application.Features.Queries.User;
+﻿namespace OnionArchitecture.Application.Features.Queries.ViewModels;
 public class UserProfileDto
 {
     public string FirstName { get; set; }

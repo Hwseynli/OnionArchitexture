@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using OnionArchitecture.Application.Interfaces;
+using OnionArchitecture.Application.Interfaces.IRepositories;
+using OnionArchitecture.Application.Interfaces.IManagers;
 using OnionArchitecture.Persistence.Concrete;
 using OnionArchitecture.Persistence.Context;
 using OnionArchitecture.Persistence.Repositories;

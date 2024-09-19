@@ -1,8 +1,7 @@
-﻿using System;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using System.Net;
 using System.Net.Mail;
-using OnionArchitecture.Application.Interfaces;
+using OnionArchitecture.Application.Interfaces.IManagers;
 
 namespace OnionArchitecture.Persistence.Concrete;
 public class EmailManager:IEmailManager

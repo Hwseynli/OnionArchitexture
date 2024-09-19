@@ -1,7 +1,7 @@
 ﻿using System.Security.Claims;
 using OnionArchitecture.Domain.Entities;
 
-namespace OnionArchitecture.Application.Interfaces;
+namespace OnionArchitecture.Application.Interfaces.IManagers;
 public interface IClaimManager
 {
     int GetCurrentUserId();

@@ -19,18 +19,22 @@
 
   <ItemGroup>
     <None Remove="Features\Commands\User\UpdateUser\" />
-    <None Remove="Features\Queries\User\" />
     <None Remove="Features\Commands\User\ForgotPassword\" />
     <None Remove="Features\Commands\User\ForgotPassword\SendOtp\" />
     <None Remove="Features\Commands\User\ForgotPassword\ResetPassword\" />
     <None Remove="Features\Commands\User\ForgotPassword\VerifyOtp\" />
+    <None Remove="Features\Queries\ViewModels\" />
+    <None Remove="Interfaces\IManagers\" />
+    <None Remove="Interfaces\IRepositories\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\Commands\User\UpdateUser\" />
-    <Folder Include="Features\Queries\User\" />
     <Folder Include="Features\Commands\User\ForgotPassword\" />
     <Folder Include="Features\Commands\User\ForgotPassword\SendOtp\" />
     <Folder Include="Features\Commands\User\ForgotPassword\ResetPassword\" />
     <Folder Include="Features\Commands\User\ForgotPassword\VerifyOtp\" />
+    <Folder Include="Features\Queries\ViewModels\" />
+    <Folder Include="Interfaces\IManagers\" />
+    <Folder Include="Interfaces\IRepositories\" />
   </ItemGroup>
 </Project>

@@ -3,7 +3,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using OnionArchitecture.Application.Interfaces;
+using OnionArchitecture.Application.Interfaces.IManagers;
 using OnionArchitecture.Domain.Entities;
 
 namespace OnionArchitecture.Persistence.Concrete;

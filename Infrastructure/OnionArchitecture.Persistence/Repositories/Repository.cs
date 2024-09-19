@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OnionArchitecture.Application.Interfaces;
+using OnionArchitecture.Application.Interfaces.IRepositories;
 using OnionArchitecture.Persistence.Context;
 using System.Linq.Expressions;
 
@@ -23,7 +23,7 @@ public class Repository<T> : IRepository<T> where T : class
         await _context.SaveChangesAsync();
     }
 
-    public async Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>> filter = null)
+    public async Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null)
     {
         IQueryable<T> query = _context.Set<T>();
 
@@ -60,7 +60,7 @@ public class Repository<T> : IRepository<T> where T : class
         return await (filter == null ? query.FirstOrDefaultAsync() : query.FirstOrDefaultAsync(filter));
     }
 
-    public async Task HardDeleteAsync(T entity)
+    public void HardDelete(T entity)
     {
         _context.Set<T>().Remove(entity);
     }

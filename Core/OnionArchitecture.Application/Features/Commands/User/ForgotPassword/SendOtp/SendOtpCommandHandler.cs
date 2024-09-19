@@ -1,7 +1,8 @@
 ﻿using FluentValidation;
 using MediatR;
 using OnionArchitecture.Application.Exceptions;
-using OnionArchitecture.Application.Interfaces;
+using OnionArchitecture.Application.Interfaces.IRepositories;
+using OnionArchitecture.Application.Interfaces.IManagers;
 using OnionArchitecture.Infrastructure.Utils;
 
 namespace OnionArchitecture.Application.Features.Commands.User.ForgotPassword.SendOtp;

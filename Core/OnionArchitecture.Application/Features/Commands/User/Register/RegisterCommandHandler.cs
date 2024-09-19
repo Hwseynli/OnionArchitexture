@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using OnionArchitecture.Application.Interfaces;
+using OnionArchitecture.Application.Interfaces.IRepositories;
 
 namespace OnionArchitecture.Application.Features.Commands.User.Register;
 public class RegisterCommandHandler : IRequestHandler<RegisterCommand, bool>

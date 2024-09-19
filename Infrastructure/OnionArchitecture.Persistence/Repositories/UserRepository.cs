@@ -1,4 +1,4 @@
-﻿using OnionArchitecture.Application.Interfaces;
+﻿using OnionArchitecture.Application.Interfaces.IRepositories;
 using OnionArchitecture.Domain.Entities;
 using OnionArchitecture.Persistence.Context;
 
