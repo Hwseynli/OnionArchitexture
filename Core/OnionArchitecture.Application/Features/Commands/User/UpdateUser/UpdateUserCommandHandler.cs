@@ -27,7 +27,7 @@ public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, bool>
             user.SetUserName(request.UserName);  // SetUserName metodundan istifadə edilir
         }
 
-        user.SetDetails(request.Name, request.Surname, user.UserName, request.Email, user.PasswordHash); // Surname,Email və Name dəyişdirilir
+        user.SetDetailsForUpdate(request.Name, request.Surname, user.UserName, request.Email, user.PasswordHash); // Surname,Email və Name dəyişdirilir
 
         await _userRepository.Commit(cancellationToken);
 

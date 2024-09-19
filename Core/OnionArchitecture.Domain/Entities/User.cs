@@ -17,7 +17,7 @@ public class User : BaseEntity
     public string? OtpCode { get; private set; }
     public DateTime?OtpGeneratedAt { get; private set; }
 
-    public void SetDetails(string firstName, string lastName, string userName, string email, string password)
+    public void SetDetailsForRegister(string firstName, string lastName, string userName, string email, string password)
     {
         FirstName = firstName;
         LastName = lastName;
@@ -26,6 +26,17 @@ public class User : BaseEntity
         Activated = true;
         IsDeleted = false;
         PasswordHash = PasswordHasher.HashPassword(password);
+    }
+
+    public void SetDetailsForUpdate(string firstName, string lastName, string userName, string email, string passwordHash)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+        UserName = userName;
+        Email = email;
+        Activated = true;
+        IsDeleted = false;
+        PasswordHash = passwordHash;
     }
 
     public void SetPasswordHash(string newPasswordHash)

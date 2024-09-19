@@ -14,7 +14,7 @@ public class RegisterCommandHandler : IRequestHandler<RegisterCommand, bool>
     public async Task<bool> Handle(RegisterCommand request, CancellationToken cancellationToken)
     {
         var user = new Domain.Entities.User();
-         user.SetDetails(request.Name,request.Surname,request.UserName,request.Email,request.Password);
+         user.SetDetailsForRegister(request.Name,request.Surname,request.UserName,request.Email,request.Password);
         await _userRepository.AddAsync(user);
         await _userRepository.Commit(cancellationToken);
         return true;
