@@ -9,3 +9,5 @@ public class CreateCustomerCommand:IRequest<bool>
     public string Email { get; set; }
     public List<AdditionDocumentModel> AdditionDocuments { get; set; }
 }
+
+

@@ -40,3 +40,6 @@ public class UserManager : IUserManager
         return _claimManager.GetCurrentUserId();
     }
 }
+
+
+

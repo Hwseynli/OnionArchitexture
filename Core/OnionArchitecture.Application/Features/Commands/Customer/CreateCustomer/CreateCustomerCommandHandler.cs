@@ -23,7 +23,7 @@ public class CreateCustomerCommandHandler: IRequestHandler<CreateCustomerCommand
     public async Task<bool> Handle(CreateCustomerCommand request, CancellationToken cancellationToken)
     {
         var userId = _userManager.GetCurrentUserId();
-        var customer = new Domain.Entities.Customer();
+        Domain.Entities.Customer customer = new Domain.Entities.Customer();
         customer.SetDetails(request.Name, request.Surname, request.Email);
         customer.SetAuditDetails(userId);
         for (int i = 0; i < request.AdditionDocuments.Count; i++)
@@ -33,7 +33,7 @@ public class CreateCustomerCommandHandler: IRequestHandler<CreateCustomerCommand
             additionDocument.SetAuditDetails(userId);
             for (int j = 0; j < request.AdditionDocuments[i].Documents.Count; j++)
             {
-                (string path, string fileName) = await request.AdditionDocuments[i].Documents[j].SaveAsync(_fileSettings.Value.CreateSubFolfers(
+                (string path, string fileName) = await request.AdditionDocuments[i].Documents[j].SaveAsync(_fileSettings.Value.CreateSubFolders(
                      _fileSettings.Value.Path,
                      _fileSettings.Value.CustomerSettings.EntityName,
                      request.Email,
@@ -52,4 +52,3 @@ public class CreateCustomerCommandHandler: IRequestHandler<CreateCustomerCommand
         return true;
     }
 }
-

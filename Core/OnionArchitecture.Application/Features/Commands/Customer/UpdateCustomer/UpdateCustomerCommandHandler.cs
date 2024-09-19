@@ -38,7 +38,7 @@ public class UpdateCustomerCommandHandler : IRequestHandler<UpdateCustomerComman
                 additionDocument.SetAuditDetails(userId);
                 for (int j = 0; j < request.AdditionDocuments[i].Documents.Count; j++)
                 {
-                    (string path, string fileName) = await request.AdditionDocuments[i].Documents[j].SaveAsync(_fileSettings.Value.CreateSubFolfers(
+                    (string path, string fileName) = await request.AdditionDocuments[i].Documents[j].SaveAsync(_fileSettings.Value.CreateSubFolders(
                          _fileSettings.Value.Path,
                          _fileSettings.Value.CustomerSettings.EntityName,
                          request.Email,
@@ -60,7 +60,7 @@ public class UpdateCustomerCommandHandler : IRequestHandler<UpdateCustomerComman
                 existDocuments.SetEditFields(userId);
                 for (int j = 0; j < request.AdditionDocuments[i]?.Documents?.Count; j++)
                 {
-                    (string path, string fileName) = await request.AdditionDocuments[i].Documents[j].SaveAsync(_fileSettings.Value.CreateSubFolfers(
+                    (string path, string fileName) = await request.AdditionDocuments[i].Documents[j].SaveAsync(_fileSettings.Value.CreateSubFolders(
                          _fileSettings.Value.Path,
                          _fileSettings.Value.CustomerSettings.EntityName,
                          request.Email,

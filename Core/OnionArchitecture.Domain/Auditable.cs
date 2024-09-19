@@ -11,7 +11,7 @@ public class Auditable<TUser>:IBaseEntity where TUser : User
 
     public void SetAuditDetails(int createdById)
     {
-        if(createdById != 0 && CreatedById != createdById)
+        if(CreatedById != 0 && CreatedById != createdById)
         {
             throw new DomainException("CreatedBy already set.");
         } 

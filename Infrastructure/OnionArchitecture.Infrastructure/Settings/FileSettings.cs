@@ -3,7 +3,8 @@ public class FileSettings
 {
     public string Path { get; set; }
     public CustomerSettings CustomerSettings { get; set; }
-    public string CreateSubFolfers(string basePath, string entiyName, string uniqueFolderName, string folderName)
+
+    public string CreateSubFolders(string basePath, string entiyName, string uniqueFolderName, string folderName)
     {
         var path = System.IO.Path.Combine(basePath, entiyName);
         if (!Directory.Exists(path))
