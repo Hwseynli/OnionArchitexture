@@ -8,7 +8,6 @@ public class UpdateUserCommand : IRequest<bool>
     public string Name { get; set; }
     public string Surname { get; set; }
     public string Password { get; set; }  // Mövcud parolun yoxlanılması üçün
-    public string? NewPassword { get; set; }  // Yeni parol təyin etmək üçün (optional)
     public string UserName { get; set; }  // Username yeniləmək istəyirsinizsə
 }
 

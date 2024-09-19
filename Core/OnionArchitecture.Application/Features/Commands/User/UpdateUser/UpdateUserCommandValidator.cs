@@ -13,21 +13,26 @@ public class UpdateUserCommandValidator : AbstractValidator<UpdateUserCommand>
 
         RuleFor(command => command.Name).NotNull();
         RuleFor(command => command.Surname).NotNull();
-        RuleFor(command => command.Email).Must(x => x.Contains("@gmail.com"))
-            .WithMessage("Sadəcə daxili mail olmalıdır");
+        RuleFor(command => command.Email).NotNull()
+            .MustAsync(async (command, email, cancellation) =>
+                    await _userRepository.IsEmailUniqueAsync(email, command.Id))
+                .WithMessage("Email artıq mövcuddur")
+            .Must(x => x.Contains("@gmail.com"))
+                .WithMessage("Sadəcə daxili mail olmalıdır");
 
-        RuleFor(command => command.UserName).NotNull().MustAsync(async (command, userName, cancellation) =>
-        {
-            var user = await _userRepository.GetAsync(u => u.Id == command.Id);
-
-            // İstifadəçi Username-i ayda yalnız bir dəfə dəyişə bilər.
-            if (user != null && user.UserName != userName &&
-                (DateTime.UtcNow - user.LastPasswordChangeDateTime).TotalDays < 30)
+        RuleFor(command => command.UserName).NotNull()
+            .MustAsync(async (command, userName, cancellation) =>
             {
-                return false;
-            }
-            return true;
-        }).WithMessage("Username yalnız ayda bir dəfə dəyişdirilə bilər.");
+                var user = await _userRepository.GetAsync(u => u.Id == command.Id);
+
+                // İstifadəçi Username-i ayda yalnız bir dəfə dəyişə bilər.
+                if (user != null && user.UserName != userName &&
+                    (DateTime.UtcNow - user.LastPasswordChangeDateTime).TotalDays < 30)
+                {
+                    return false;
+                }
+                return true;
+            }).WithMessage("Username yalnız ayda bir dəfə dəyişdirilə bilər.");
 
         // Mövcud parolun düzgünlüyünü yoxlamaq üçün
         RuleFor(command => command.Password).NotNull()
@@ -38,4 +43,3 @@ public class UpdateUserCommandValidator : AbstractValidator<UpdateUserCommand>
             }).WithMessage("Mövcud parol səhvdir.");
     }
 }
-

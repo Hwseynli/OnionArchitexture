@@ -1,7 +1,6 @@
 ﻿using MediatR;
 using OnionArchitecture.Application.Exceptions;
 using OnionArchitecture.Application.Interfaces;
-using OnionArchitecture.Infrastructure;
 
 namespace OnionArchitecture.Application.Features.Commands.User.UpdateUser;
 public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, bool>
@@ -28,13 +27,7 @@ public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, bool>
             user.SetUserName(request.UserName);  // SetUserName metodundan istifadə edilir
         }
 
-        // İstifadəçi yeni parol təyin edirsə, parol yenilənir
-        if (!string.IsNullOrWhiteSpace(request.NewPassword))
-        {
-            user.SetPasswordHash(PasswordHasher.HashPassword(request.NewPassword));
-        }
-
-        user.SetDetails(request.Name, request.Surname, user.UserName, user.Email, user.PasswordHash); // Surname və Name dəyişdirilir
+        user.SetDetails(request.Name, request.Surname, user.UserName, request.Email, user.PasswordHash); // Surname,Email və Name dəyişdirilir
 
         await _userRepository.Commit(cancellationToken);
 
