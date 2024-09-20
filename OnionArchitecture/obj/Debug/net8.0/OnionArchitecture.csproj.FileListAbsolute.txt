@@ -379,3 +379,10 @@
 /Users/zeyneb/Desktop/OnionArchitexture/OnionArchitecture/obj/Debug/net8.0/OnionArchitecture.genruntimeconfig.cache
 /Users/zeyneb/Desktop/OnionArchitexture/OnionArchitecture/obj/Debug/net8.0/ref/OnionArchitecture.dll
 /Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Microsoft.AspNetCore.Razor.Language.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Microsoft.CodeAnalysis.Razor.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Newtonsoft.Json.Bson.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/System.Security.Permissions.dll

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using OnionArchitecture.Application.Features.Commands.Customer.CreateCustomer;
 using OnionArchitecture.Application.Features.Commands.Customer.UpdateCustomer;
+using OnionArchitecture.Application.Interfaces.IManagers;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,10 +12,12 @@ namespace OnionArchitecture.Controllers;
 public class CustomersController : ControllerBase
 {
     private readonly IMediator _mediator;
+    private readonly IDocumentManager _documentManager;
 
-    public CustomersController(IMediator mediator)
+    public CustomersController(IMediator mediator, IDocumentManager documentManager)
     {
         _mediator = mediator;
+        _documentManager = documentManager;
     }
 
     [HttpPost]
@@ -30,7 +33,12 @@ public class CustomersController : ControllerBase
         var result = await _mediator.Send(command);
         return result ? Ok() : BadRequest();
     }
+
+    [HttpGet("{customerId}/documents/{additionDocumentId}")]
+    public async Task<IActionResult> DownloadDocuments(int customerId, int additionDocumentId)
+    {
+        return await _documentManager.DownloadDocuments(customerId, additionDocumentId);
+    }
+
 }
-
-
 
