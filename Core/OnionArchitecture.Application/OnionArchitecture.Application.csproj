@@ -32,6 +32,9 @@
     <None Remove="Features\Commands\Customer\UpdateCustomer\" />
     <None Remove="Features\Commands\Customer\ViewModels\" />
     <None Remove="Interfaces\IRepositories\IDocuments\" />
+    <None Remove="Features\Queries\User\" />
+    <None Remove="Features\Queries\ViewModels\Customers\" />
+    <None Remove="Features\Queries\Customers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\Commands\User\UpdateUser\" />
@@ -47,5 +50,8 @@
     <Folder Include="Features\Commands\Customer\UpdateCustomer\" />
     <Folder Include="Features\Commands\Customer\ViewModels\" />
     <Folder Include="Interfaces\IRepositories\IDocuments\" />
+    <Folder Include="Features\Queries\User\" />
+    <Folder Include="Features\Queries\ViewModels\Customers\" />
+    <Folder Include="Features\Queries\Customers\" />
   </ItemGroup>
 </Project>

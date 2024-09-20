@@ -35,7 +35,6 @@ public static class ServiceRegistration
             .AsImplementedInterfaces()
             .WithScopedLifetime());
 
-        services.AddScoped<IUserQueries, UserQueries>();
         services.AddScoped<IClaimManager, ClaimManager>();
         services.AddScoped<IUserManager, UserManager>();
         services.AddScoped<IEmailManager, EmailManager>();

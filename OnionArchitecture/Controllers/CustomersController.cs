@@ -1,7 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using OnionArchitecture.Application.Exceptions;
 using OnionArchitecture.Application.Features.Commands.Customer.CreateCustomer;
 using OnionArchitecture.Application.Features.Commands.Customer.UpdateCustomer;
+using OnionArchitecture.Application.Features.Queries.Customers;
 using OnionArchitecture.Application.Interfaces.IManagers;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,11 +15,14 @@ public class CustomersController : ControllerBase
 {
     private readonly IMediator _mediator;
     private readonly IDocumentManager _documentManager;
+    private readonly ICustomerQueries _customerQueries;
 
-    public CustomersController(IMediator mediator, IDocumentManager documentManager)
+
+    public CustomersController(IMediator mediator, IDocumentManager documentManager, ICustomerQueries customerQueries)
     {
         _mediator = mediator;
         _documentManager = documentManager;
+        _customerQueries = customerQueries;
     }
 
     [HttpPost]
@@ -32,6 +37,16 @@ public class CustomersController : ControllerBase
     {
         var result = await _mediator.Send(command);
         return result ? Ok() : BadRequest();
+    }
+
+    [HttpGet("{customerId}")]
+    public async Task<IActionResult> GetById(int customerId)
+    {
+        var customer = await _customerQueries.GetByIdAsync(customerId);
+        if (customer == null)
+            throw new NotFoundException();
+
+        return Ok(customer);
     }
 
     [HttpGet("{customerId}/documents/{additionDocumentId}")]

@@ -1,11 +1,23 @@
-﻿using OnionArchitecture.Application.Interfaces.IRepositories;
+﻿using Microsoft.EntityFrameworkCore;
+using OnionArchitecture.Application.Interfaces.IRepositories;
 using OnionArchitecture.Domain.Entities;
 using OnionArchitecture.Persistence.Context;
 
 namespace OnionArchitecture.Persistence.Repositories;
 public class CustomerRepository:Repository<Customer>,ICustomerRepository
 {
+    private readonly TestDbContext _context;
+
     public CustomerRepository(TestDbContext context) : base(context)
     {
+        _context = context;
+    }
+
+    public async Task<Customer?> GetByIdAsync(int customerId)
+    {
+        return await _context.Customers
+            .Include(c => c.AdditionDocuments)   // Müştəriyə aid sənədləri daxil etmək üçün
+            .ThenInclude(ad => ad.Documents)     // Hər bir sənədin detalları ilə birlikdə
+            .FirstOrDefaultAsync(c => c.Id == customerId);  // Müştərinin ID-si əsasında gətiririk
     }
 }
