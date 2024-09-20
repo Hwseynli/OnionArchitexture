@@ -8,10 +8,12 @@ namespace OnionArchitecture.Persistence.Concrete;
 public class DocumentManager : IDocumentManager
 {
     private readonly IDocumentRepository _documentRepository;
+    private readonly ICustomerRepository _customerRepository;
 
-    public DocumentManager(IDocumentRepository documentRepository)
+    public DocumentManager(IDocumentRepository documentRepository, ICustomerRepository customerRepository)
     {
         _documentRepository = documentRepository;
+        _customerRepository = customerRepository;
     }
 
     public async Task<IActionResult> DownloadDocuments(int customerId, int additionDocumentId)
@@ -40,6 +42,26 @@ public class DocumentManager : IDocumentManager
                 FileDownloadName = $"{customerId}_documents.zip"
             };
         }
+    }
+
+    public async Task<IActionResult> GetDocumentsWithTypes(int customerId)
+    {
+        var customer = await _customerRepository.GetByIdAsync(customerId);
+        if (customer == null)
+        {
+            return new NotFoundResult();
+        }
+
+        var documentsWithTypes = customer.AdditionDocuments
+            .SelectMany(ad => ad.Documents.Select(d => new
+            {
+                DocumentId = d.Id,
+                DocumentType = ad.DocumentType.ToString(),
+                d.Name
+            }))
+            .ToList();
+
+        return new OkObjectResult(documentsWithTypes);
     }
 
     private async Task<string> CreateZipArchive(IEnumerable<Document> documents)

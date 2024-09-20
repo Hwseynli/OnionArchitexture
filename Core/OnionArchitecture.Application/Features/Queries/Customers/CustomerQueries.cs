@@ -1,4 +1,5 @@
-﻿using OnionArchitecture.Application.Exceptions;
+﻿using Microsoft.AspNetCore.Mvc;
+using OnionArchitecture.Application.Exceptions;
 using OnionArchitecture.Application.Features.Queries.ViewModels.Customers;
 using OnionArchitecture.Application.Interfaces.IRepositories;
 
@@ -43,4 +44,26 @@ public class CustomerQueries:ICustomerQueries
 
         return customerDto;
     }
+
+    public async Task<IActionResult> GetCustomerDocuments(int customerId)
+    {
+        var customer = await _customerRepository.GetByIdAsync(customerId);
+        if (customer == null)
+        {
+            return new NotFoundResult();
+        }
+
+        var customerDocuments = customer.AdditionDocuments
+            .SelectMany(ad => ad.Documents.Select(d => new
+            {
+                DocumentId = d.Id,
+                DocumentName = d.Name,
+                DocumentPath = d.Path,
+                DocumentType = ad.DocumentType.ToString()
+            }))
+            .ToList();
+
+        return new OkObjectResult(customerDocuments);
+    }
+
 }

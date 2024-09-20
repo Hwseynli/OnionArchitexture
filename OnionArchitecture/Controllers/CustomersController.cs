@@ -4,9 +4,6 @@ using OnionArchitecture.Application.Exceptions;
 using OnionArchitecture.Application.Features.Commands.Customer.CreateCustomer;
 using OnionArchitecture.Application.Features.Commands.Customer.UpdateCustomer;
 using OnionArchitecture.Application.Features.Queries.Customers;
-using OnionArchitecture.Application.Interfaces.IManagers;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace OnionArchitecture.Controllers;
 [Route("api/customer")]
@@ -14,14 +11,12 @@ namespace OnionArchitecture.Controllers;
 public class CustomersController : ControllerBase
 {
     private readonly IMediator _mediator;
-    private readonly IDocumentManager _documentManager;
     private readonly ICustomerQueries _customerQueries;
 
 
-    public CustomersController(IMediator mediator, IDocumentManager documentManager, ICustomerQueries customerQueries)
+    public CustomersController(IMediator mediator, ICustomerQueries customerQueries)
     {
         _mediator = mediator;
-        _documentManager = documentManager;
         _customerQueries = customerQueries;
     }
 
@@ -49,11 +44,10 @@ public class CustomersController : ControllerBase
         return Ok(customer);
     }
 
-    [HttpGet("{customerId}/documents/{additionDocumentId}")]
-    public async Task<IActionResult> DownloadDocuments(int customerId, int additionDocumentId)
+    [HttpGet("{customerId}/documents")]
+    public async Task<IActionResult> GetCustomerDocuments(int customerId)
     {
-        return await _documentManager.DownloadDocuments(customerId, additionDocumentId);
+        return await _customerQueries.GetCustomerDocuments(customerId);
     }
-
 }
 
