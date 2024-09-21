@@ -4,5 +4,5 @@ namespace OnionArchitecture.Application.Features.Commands.User.ForgotPassword.Re
 public class ResetPasswordCommand : IRequest<bool>
 {
     public string NewPassword { get; set; }
-    public string OtpCode { get; set; }
-}
+    public string Email { get; set; }
+}//maille yoxlamaq

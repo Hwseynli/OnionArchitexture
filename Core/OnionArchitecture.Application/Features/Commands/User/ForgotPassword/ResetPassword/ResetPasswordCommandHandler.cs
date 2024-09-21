@@ -14,7 +14,7 @@ public class ResetPasswordCommandHandler : IRequestHandler<ResetPasswordCommand,
 
     public async Task<bool> Handle(ResetPasswordCommand request, CancellationToken cancellationToken)
     {
-        var user = await _userRepository.GetAsync(u => u.OtpCode != null && u.OtpCode == request.OtpCode && u.OtpGeneratedAt != null);
+        var user = await _userRepository.GetAsync(u => u.OtpCode != null && u.Email == request.Email && u.OtpGeneratedAt != null);
 
         if (user == null)
             throw new BadRequestException("Invalid OTP or OTP has expired.");

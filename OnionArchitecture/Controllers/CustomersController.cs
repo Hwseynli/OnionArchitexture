@@ -13,7 +13,6 @@ public class CustomersController : ControllerBase
     private readonly IMediator _mediator;
     private readonly ICustomerQueries _customerQueries;
 
-
     public CustomersController(IMediator mediator, ICustomerQueries customerQueries)
     {
         _mediator = mediator;
@@ -49,5 +48,16 @@ public class CustomersController : ControllerBase
     {
         return await _customerQueries.GetCustomerDocuments(customerId);
     }
-}
 
+    [HttpGet("{customerId}/documents/{additionDocumentId}")]
+    public async Task<IActionResult> DownloadDocuments(int additionDocumentId)
+    {
+        return await _customerQueries.DownloadDocuments(additionDocumentId);
+    }
+
+    [HttpGet("{customerId}/documents")]
+    public async Task<IActionResult> GetDocumentsWithTypes(int customerId)
+    {
+        return await _customerQueries.GetDocumentsWithTypes(customerId);
+    }
+}

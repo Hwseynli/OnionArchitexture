@@ -8,7 +8,7 @@ public class CreateCustomerCommandValidator : AbstractValidator<CreateCustomerCo
     {
         RuleFor(command => command.Name).NotNull();
         RuleFor(command => command.Surname).NotNull();
-        RuleFor(command => command.Email).NotNull();
+        RuleFor(command => command.Email).NotNull().EmailAddress();
         RuleFor(command => command.AdditionDocuments).Must(x => x.Count > 0);
         RuleForEach(command => command.AdditionDocuments)
             .ChildRules(order =>

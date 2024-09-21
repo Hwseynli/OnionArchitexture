@@ -18,6 +18,5 @@ public static class ServiceRegistration
         services.AddScoped<IUserQueries, UserQueries>();
         services.AddScoped<ICustomerQueries, CustomerQueries>();
 
-
     }
 }

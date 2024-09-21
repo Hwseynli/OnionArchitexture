@@ -6,5 +6,7 @@ public interface ICustomerQueries
 {
     Task<CustomerDto> GetByIdAsync(int customerId);
     Task<IActionResult> GetCustomerDocuments(int customerId);
+    Task<IActionResult> DownloadDocuments(int additionDocumentId);
+    Task<IActionResult> GetDocumentsWithTypes(int customerId);
 }
 
