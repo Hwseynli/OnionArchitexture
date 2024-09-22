@@ -5,6 +5,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using OnionArchitecture.Persistence;
 using OnionArchitecture.Infrastructure.Settings;
+using OnionArchitecture.Infrastructure.SeedDatas;
+using OnionArchitecture.Persistence.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -74,6 +76,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddHttpContextAccessor();
+
 builder.Services.Configure<FileSettings>(configuration.GetSection(nameof(FileSettings)));
 var app = builder.Build();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
@@ -91,5 +94,15 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+//For seedDatas
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<TestDbContext>();
+    var logger = services.GetRequiredService<ILogger<TestSeedDbContext>>();
+    var seed = services.GetRequiredService<TestSeedDbContext>();
+    await seed.SeedAsync(context, logger);
+}
 
 app.Run();

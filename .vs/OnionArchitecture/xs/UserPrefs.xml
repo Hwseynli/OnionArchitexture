@@ -5,21 +5,7 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="OnionArchitecture" expanded="True">
-            <Node name="Core" expanded="True">
-              <Node name="OnionArchitecture.Application">
-                <Node name="Interfaces">
-                  <Node name="IRepositories" expanded="True" />
-                </Node>
-              </Node>
-            </Node>
-            <Node name="Infrastructure" expanded="True" />
-            <Node name="OnionArchitecture" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="DocumentsController.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="OnionArchitecture" expanded="True" />
         </State>
       </Pad>
     </Pads>

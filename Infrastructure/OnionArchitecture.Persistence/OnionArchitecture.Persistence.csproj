@@ -29,10 +29,13 @@
     <None Remove="Repositories\Documents\" />
     <None Remove="EntityConfiguration\CustomerEntityTypeConfigurations\" />
     <None Remove="EntityConfiguration\DocumentEntityTypeConfigurations\" />
+    <None Remove="EntityConfiguration\RoleEntityTypeConfigurations\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repositories\Documents\" />
     <Folder Include="EntityConfiguration\CustomerEntityTypeConfigurations\" />
     <Folder Include="EntityConfiguration\DocumentEntityTypeConfigurations\" />
+    <Folder Include="EntityConfiguration\CustomerEntityTypeConfigurations\" />
+    <Folder Include="EntityConfiguration\RoleEntityTypeConfigurations\" />
   </ItemGroup>
 </Project>
