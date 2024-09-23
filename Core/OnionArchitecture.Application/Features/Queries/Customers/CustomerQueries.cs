@@ -1,5 +1,8 @@
 ﻿using System.IO.Compression;
 using System.Linq.Expressions;
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
 using Microsoft.AspNetCore.Mvc;
 using OnionArchitecture.Application.Exceptions;
 using OnionArchitecture.Application.Features.Queries.ViewModels.Customers;
@@ -19,6 +22,93 @@ public class CustomerQueries:ICustomerQueries
         _customerRepository = customerRepository;
         _additionDocumentRepository = additionDocumentRepository;
         _documentRepository = documentRepository;
+    }
+
+    public async Task<byte[]> ExportCustomersToExcelAsync(DateTime? fromDate, DateTime? toDate)
+    {
+        // Müvafiq tarix aralığında olan müştəriləri əldə etmək
+        var customers = await _customerRepository.GetAllByDateRangeAsync(fromDate, toDate);
+
+        // Excel faylı yaratmaq üçün MemoryStream istifadə olunur
+        using (var memoryStream = new MemoryStream())
+        {
+            // Excel sənədi yaratmaq
+            using (SpreadsheetDocument document = SpreadsheetDocument.Create(memoryStream, SpreadsheetDocumentType.Workbook))
+            {
+                WorkbookPart workbookPart = document.AddWorkbookPart();
+                workbookPart.Workbook = new Workbook();
+
+                // Sheet yaratmaq
+                WorksheetPart worksheetPart = workbookPart.AddNewPart<WorksheetPart>();
+                worksheetPart.Worksheet = new Worksheet(new SheetData());
+
+                // Sheets kolleksiyasını yaratmaq
+                Sheets sheets = document.WorkbookPart.Workbook.AppendChild(new Sheets());
+
+                // Sheet əlavə etmək
+                Sheet sheet = new Sheet()
+                {
+                    Id = document.WorkbookPart.GetIdOfPart(worksheetPart),
+                    SheetId = 1,
+                    Name = "Customers"
+                };
+                sheets.Append(sheet);
+
+                // SheetData alınır
+                SheetData sheetData = worksheetPart.Worksheet.GetFirstChild<SheetData>();
+
+                // Başlıqları əlavə edirik
+                Row headerRow = new Row();
+                headerRow.Append(
+                    CreateCell("Customer ID"),
+                    CreateCell("First Name"),
+                    CreateCell("Last Name"),
+                    CreateCell("Email"),
+                    CreateCell("AdditionId"),
+                    CreateCell("Document Name"),
+                    CreateCell("Document Type"),
+                    CreateCell("Document Path")
+                );
+                sheetData.AppendChild(headerRow);
+
+                // Məlumatları əlavə etmək
+                foreach (var customer in customers)
+                {
+                    foreach (var additionDocument in customer.AdditionDocuments)
+                    {
+                        foreach (var document1 in additionDocument.Documents)
+                        {
+                            Row dataRow = new Row();
+                            dataRow.Append(
+                                CreateCell(customer.Id.ToString()),
+                                CreateCell(customer.FirstName),
+                                CreateCell(customer.LastName),
+                                CreateCell(customer.Email),
+                                CreateCell(additionDocument.Id.ToString()),
+                                CreateCell(document1.Name),
+                                CreateCell(additionDocument.DocumentType.ToString()),
+                                CreateCell(document1.Path)
+                            );
+                            sheetData.AppendChild(dataRow);
+                        }
+                    }
+                }
+
+                workbookPart.Workbook.Save();
+            }
+
+            return memoryStream.ToArray();
+        }
+    }
+
+    // Hüceyrə yaratmaq üçün funksiya
+    private Cell CreateCell(string value)
+    {
+        return new Cell()
+        {
+            DataType = CellValues.String,
+            CellValue = new CellValue(value)
+        };
     }
 
     // Customer üçün getAll yazın:pagination və filtrasiya ilə bir yerdə olsun.  Date görə də filtr olsun

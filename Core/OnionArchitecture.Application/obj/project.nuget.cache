@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "aca9NXe98RQLqrPek5q5dobiUekGqnOXb/Tpf5PucacMVurX2JMNFn+7NB61PxeyXz9/EA3zwvAmZvNwvpszew==",
+  "dgSpecHash": "ZLcM3qJThWzXiscUERc8pnTjybkcelkPR6CUyqz/TY62Pu4GTlE6v2Qr4wni0yB5k8vAZEhPO/pcoH09wsyZkw==",
   "success": true,
   "projectFilePath": "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj",
   "expectedPackageFiles": [
+    "/Users/zeyneb/.nuget/packages/documentformat.openxml/3.1.0/documentformat.openxml.3.1.0.nupkg.sha512",
+    "/Users/zeyneb/.nuget/packages/documentformat.openxml.framework/3.1.0/documentformat.openxml.framework.3.1.0.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/fluentvalidation/11.9.2/fluentvalidation.11.9.2.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.9.2/fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/mediatr/12.4.0/mediatr.12.4.0.nupkg.sha512",
@@ -119,6 +121,7 @@
     "/Users/zeyneb/.nuget/packages/system.io.compression.zipfile/4.3.0/system.io.compression.zipfile.4.3.0.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/system.io.filesystem/4.3.0/system.io.filesystem.4.3.0.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/system.io.filesystem.primitives/4.3.0/system.io.filesystem.primitives.4.3.0.nupkg.sha512",
+    "/Users/zeyneb/.nuget/packages/system.io.packaging/8.0.0/system.io.packaging.8.0.0.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/system.linq/4.3.0/system.linq.4.3.0.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/system.linq.expressions/4.3.0/system.linq.expressions.4.3.0.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/system.net.http/4.3.0/system.net.http.4.3.0.nupkg.sha512",

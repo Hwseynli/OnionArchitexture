@@ -33,6 +33,24 @@ public class CustomersController : ControllerBase
         return result ? Ok() : BadRequest();
     }
 
+    // Excel export API metodu
+    [HttpGet("exportToExcel")]
+    public async Task<IActionResult> ExportToExcel(
+        [FromQuery] DateTime? fromDate = null,
+        [FromQuery] DateTime? toDate = null)
+    {
+        // Müvafiq tarix aralığında Excel faylını yaratmaq
+        var fileContent = await _customerQueries.ExportCustomersToExcelAsync(fromDate, toDate);
+
+        if (fileContent == null || fileContent.Length == 0)
+        {
+            return NotFound("No customers found for the given date range.");
+        }
+
+        // Excel faylını geri qaytarmaq
+        return File(fileContent, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Customers.xlsx");
+    }
+
     // Pagination və tarix filtrasiyası ilə birgə müştərilərin siyahısını əldə etmək üçün GET metodu
     [HttpGet("getAll")]
     public async Task<IActionResult> GetAll(

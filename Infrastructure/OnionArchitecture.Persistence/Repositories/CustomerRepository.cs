@@ -22,6 +22,30 @@ public class CustomerRepository:Repository<Customer>,ICustomerRepository
             .FirstOrDefaultAsync(c => c.Id == customerId);  // Müştərinin ID-si əsasında gətiririk
     }
 
+    public async Task<IEnumerable<Customer>> GetAllByDateRangeAsync(DateTime? fromDate, DateTime? toDate)
+    {
+        // Müştəriləri tarix aralığına görə süzmək
+        var query = _context.Customers
+            .Include(c => c.AdditionDocuments)
+                .ThenInclude(ad => ad.Documents)
+            .AsQueryable();
+
+        // Əgər `fromDate` təyin olunubsa, o tarixdən sonrakı müştəriləri süz
+        if (fromDate.HasValue)
+        {
+            query = query.Where(c => c.RecordDateTime >= fromDate.Value);
+        }
+
+        // Əgər `toDate` təyin olunubsa, o tarixə qədər olan müştəriləri süz
+        if (toDate.HasValue)
+        {
+            query = query.Where(c => c.RecordDateTime <= toDate.Value);
+        }
+
+        return await query.ToListAsync();
+    }
+
+
     public async Task<IEnumerable<Customer>> GetAllPagedAsync(int pageNumber, int pageSize, Expression<Func<Customer, bool>>? filter = null)
     {
         IQueryable<Customer> query = _context.Customers

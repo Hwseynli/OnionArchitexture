@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "UomsENq6KXm9ApIENEj77DpG+F0eJ2S4mz1vzJebx+5/HHlvLJ+281t8G4hMfBsNZWAXwAfbDUKNQjZ6pGSk0A==",
+  "dgSpecHash": "Ck5mYVLZXqDecZlcfIM5laJjM1xK/ZqCHH9c+GTHP5tTQW4VLbvSagc8cDEX3PSmzp0AE3AUMwsRc0u3tSL78A==",
   "success": true,
   "projectFilePath": "/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Persistence/OnionArchitecture.Persistence.csproj",
   "expectedPackageFiles": [
+    "/Users/zeyneb/.nuget/packages/documentformat.openxml/3.1.0/documentformat.openxml.3.1.0.nupkg.sha512",
+    "/Users/zeyneb/.nuget/packages/documentformat.openxml.framework/3.1.0/documentformat.openxml.framework.3.1.0.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/fluentvalidation/11.9.2/fluentvalidation.11.9.2.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.9.2/fluentvalidation.dependencyinjectionextensions.11.9.2.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
@@ -142,6 +144,7 @@
     "/Users/zeyneb/.nuget/packages/system.io.compression.zipfile/4.3.0/system.io.compression.zipfile.4.3.0.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/system.io.filesystem/4.3.0/system.io.filesystem.4.3.0.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/system.io.filesystem.primitives/4.3.0/system.io.filesystem.primitives.4.3.0.nupkg.sha512",
+    "/Users/zeyneb/.nuget/packages/system.io.packaging/8.0.0/system.io.packaging.8.0.0.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/system.io.pipelines/6.0.3/system.io.pipelines.6.0.3.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/system.linq/4.3.0/system.linq.4.3.0.nupkg.sha512",
     "/Users/zeyneb/.nuget/packages/system.linq.expressions/4.3.0/system.linq.expressions.4.3.0.nupkg.sha512",
