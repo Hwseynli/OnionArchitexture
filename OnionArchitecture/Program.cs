@@ -76,8 +76,9 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddHttpContextAccessor();
-
 builder.Services.Configure<FileSettings>(configuration.GetSection(nameof(FileSettings)));
+builder.Services.AddScoped<TestSeedDbContext>();
+
 var app = builder.Build();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 // Configure the HTTP request pipeline.
@@ -95,7 +96,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-//For seedDatas
+////For seedDatas
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;

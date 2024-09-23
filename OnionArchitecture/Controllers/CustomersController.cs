@@ -33,6 +33,32 @@ public class CustomersController : ControllerBase
         return result ? Ok() : BadRequest();
     }
 
+    // Pagination və tarix filtrasiyası ilə birgə müştərilərin siyahısını əldə etmək üçün GET metodu
+    [HttpGet("getAll")]
+    public async Task<IActionResult> GetAll(
+        [FromQuery] int pageNumber = 1,        // Default olaraq səhifə 1
+        [FromQuery] int pageSize = 10,         // Default olaraq səhifədə 10 element
+        [FromQuery] DateTime? fromDate = null, // Tarix filtrasiyası üçün optional olaraq fromDate
+        [FromQuery] DateTime? toDate = null    // Tarix filtrasiyası üçün optional olaraq toDate
+    )
+    {
+        // Gələn sorğunu yoxlayırıq və səhifə və ölçü üçün minimal dəyərlər veririk
+        if (pageNumber <= 0) pageNumber = 1;
+        if (pageSize <= 0) pageSize = 10;
+
+        // Customer məlumatlarını əldə edirik
+        var result = await _customerQueries.GetAllAsync(pageNumber, pageSize, fromDate, toDate);
+
+        // Pagination nəticəsi boş olduqda 404 qaytarırıq
+        if (result.Items.Count == 0)
+        {
+            return NotFound("No customers found for the given filters.");
+        }
+
+        // Pagination nəticəsi varsa 200 qaytarırıq
+        return Ok(result);
+    }
+
     [HttpGet("{customerId}")]
     public async Task<IActionResult> GetById(int customerId)
     {
@@ -55,7 +81,7 @@ public class CustomersController : ControllerBase
         return await _customerQueries.DownloadDocuments(additionDocumentId);
     }
 
-    [HttpGet("{customerId}/documents")]
+    [HttpGet("{customerId}/documentTypes")]
     public async Task<IActionResult> GetDocumentsWithTypes(int customerId)
     {
         return await _customerQueries.GetDocumentsWithTypes(customerId);

@@ -53,7 +53,9 @@ namespace OnionArchitecture.Infrastructure.SeedDatas
                     logger.LogTrace($"{prefix} Exception {exception.GetType().Name} with message {exception.Message} detected on attemt {retry} of {retries}");
                 });
         }
-
     }
 }
+
+
+
 

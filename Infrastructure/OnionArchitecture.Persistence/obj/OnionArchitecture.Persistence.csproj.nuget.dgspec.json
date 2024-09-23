@@ -37,11 +37,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -118,11 +113,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -177,11 +167,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -250,9 +235,6 @@
             "projectReferences": {
               "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj": {
                 "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj"
-              },
-              "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj": {
-                "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj"
               }
             }
           }
@@ -261,11 +243,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {

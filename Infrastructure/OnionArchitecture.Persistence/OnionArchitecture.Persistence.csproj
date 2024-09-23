@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\OnionArchitecture.Application\OnionArchitecture.Application.csproj" />
-    <ProjectReference Include="..\..\Core\OnionArchitecture.Domain\OnionArchitecture.Domain.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.2" />

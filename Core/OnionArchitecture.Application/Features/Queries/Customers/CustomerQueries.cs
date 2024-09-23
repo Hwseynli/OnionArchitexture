@@ -1,8 +1,10 @@
 ﻿using System.IO.Compression;
+using System.Linq.Expressions;
 using Microsoft.AspNetCore.Mvc;
 using OnionArchitecture.Application.Exceptions;
 using OnionArchitecture.Application.Features.Queries.ViewModels.Customers;
 using OnionArchitecture.Application.Interfaces.IRepositories;
+using OnionArchitecture.Domain.Entities;
 using OnionArchitecture.Domain.Entities.Documents;
 
 namespace OnionArchitecture.Application.Features.Queries.Customers;
@@ -18,6 +20,57 @@ public class CustomerQueries:ICustomerQueries
         _additionDocumentRepository = additionDocumentRepository;
         _documentRepository = documentRepository;
     }
+
+    // Customer üçün getAll yazın:pagination və filtrasiya ilə bir yerdə olsun.  Date görə də filtr olsun
+    // Pagination və tarix filtrasiya üçün yeni metod
+    public async Task<PagedResult<CustomerDto>> GetAllAsync(int pageNumber, int pageSize, DateTime? fromDate, DateTime? toDate)
+    {
+        // Tarix üzrə filtrasiya tətbiq olunur
+        Expression<Func<Customer, bool>>? filter = null;
+
+        if (fromDate.HasValue && toDate.HasValue)
+        {
+            filter = c => c.RecordDateTime >= fromDate && c.RecordDateTime <= toDate;
+        }
+        else if (fromDate.HasValue)
+        {
+            filter = c => c.RecordDateTime >= fromDate;
+        }
+        else if (toDate.HasValue)
+        {
+            filter = c => c.RecordDateTime <= toDate;
+        }
+
+        // Müştərilərin cəmi sayını əldə edirik (pagination üçün lazım olacaq)
+        var totalRecords = await _customerRepository.GetAllCountAsync(filter);
+
+        // Müştəriləri lazımi səhifə ölçüsünə və səhifə nömrəsinə görə alırıq
+        var customers = await _customerRepository.GetAllPagedAsync(pageNumber, pageSize, filter);
+
+        // Customer məlumatlarını DTO formatına çeviririk
+        var customerDtos = customers.Select(customer => new CustomerDto
+        {
+            CustomerId = customer.Id,
+            FirstName = customer.FirstName,
+            LastName = customer.LastName,
+            Email = customer.Email,
+            AdditionDocuments = customer.AdditionDocuments?.Select(ad => new DocumentDto
+            {
+                DocumentId = ad.Id,
+                DocumentName = ad.Documents.FirstOrDefault()?.Name ?? "Unnamed",
+                DocumentType = ad.DocumentType.ToString()
+            }).ToList()
+        }).ToList();
+
+        return new PagedResult<CustomerDto>
+        {
+            Items = customerDtos,
+            TotalCount = totalRecords,
+            PageSize = pageSize,
+            PageNumber = pageNumber
+        };
+    }
+
 
     public async Task<CustomerDto> GetByIdAsync(int customerId)
     {

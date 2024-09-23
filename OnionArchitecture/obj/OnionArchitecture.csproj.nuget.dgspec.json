@@ -235,9 +235,6 @@
             "projectReferences": {
               "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj": {
                 "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj"
-              },
-              "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj": {
-                "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj"
               }
             }
           }
@@ -328,12 +325,6 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj": {
-                "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj"
-              },
-              "/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj": {
-                "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj"
-              },
               "/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Persistence/OnionArchitecture.Persistence.csproj": {
                 "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Persistence/OnionArchitecture.Persistence.csproj"
               }

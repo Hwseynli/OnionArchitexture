@@ -9504,7 +9504,6 @@
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.8",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.4",
       "OnionArchitecture.Application >= 1.0.0",
-      "OnionArchitecture.Domain >= 1.0.0",
       "Scrutor >= 4.2.2",
       "System.IdentityModel.Tokens.Jwt >= 8.0.2"
     ]
@@ -9537,9 +9536,6 @@
           "projectReferences": {
             "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj": {
               "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj"
-            },
-            "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj": {
-              "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Domain/OnionArchitecture.Domain.csproj"
             }
           }
         }
@@ -9548,11 +9544,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {

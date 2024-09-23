@@ -3756,7 +3756,6 @@
           "Microsoft.EntityFrameworkCore": "8.0.8",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4",
           "OnionArchitecture.Application": "1.0.0",
-          "OnionArchitecture.Domain": "1.0.0",
           "Scrutor": "4.2.2",
           "System.IdentityModel.Tokens.Jwt": "8.0.2"
         },
@@ -10630,8 +10629,6 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.8",
       "Microsoft.Extensions.Http.Polly >= 8.0.8",
-      "OnionArchitecture.Application >= 1.0.0",
-      "OnionArchitecture.Infrastructure >= 1.0.0",
       "OnionArchitecture.Persistence >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0",
       "System.Data.SqlClient >= 4.8.6"
@@ -10663,12 +10660,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj": {
-              "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Core/OnionArchitecture.Application/OnionArchitecture.Application.csproj"
-            },
-            "/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj": {
-              "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Infrastructure/OnionArchitecture.Infrastructure.csproj"
-            },
             "/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Persistence/OnionArchitecture.Persistence.csproj": {
               "projectPath": "/Users/zeyneb/Projects/OnionArchitexture/Infrastructure/OnionArchitecture.Persistence/OnionArchitecture.Persistence.csproj"
             }
