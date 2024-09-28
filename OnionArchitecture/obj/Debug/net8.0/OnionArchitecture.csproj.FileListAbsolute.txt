@@ -399,3 +399,13 @@
 /Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/obj/Debug/net8.0/OnionArchitecture.pdb
 /Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/obj/Debug/net8.0/OnionArchitecture.genruntimeconfig.cache
 /Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/obj/Debug/net8.0/ref/OnionArchitecture.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/appsettings.Staging.json
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Serilog.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Serilog.AspNetCore.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Serilog.Extensions.Hosting.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Serilog.Extensions.Logging.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Serilog.Formatting.Compact.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Serilog.Settings.Configuration.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Serilog.Sinks.Console.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Serilog.Sinks.Debug.dll
+/Users/zeyneb/Projects/OnionArchitexture/OnionArchitecture/bin/Debug/net8.0/Serilog.Sinks.File.dll

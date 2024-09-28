@@ -101,7 +101,7 @@ public class CustomerQueries:ICustomerQueries
         }
     }
 
-    // Hüceyrə yaratmaq üçün funksiya
+    // xana yaratmaq üçün funksiya
     private Cell CreateCell(string value)
     {
         return new Cell()
